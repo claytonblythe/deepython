@@ -16,8 +16,8 @@ DEFAULT_LANG = 'en'
 # Defaults
 DEFAULT_CATEGORY = 'Miscellaneous'
 USE_FOLDER_AS_CATEGORY = False
-ARTICLE_URL = u'{slug}'
-PAGE_URL = u'{slug}'
+ARTICLE_URL = u'{slug}.html'
+PAGE_URL = u'{slug}.html'
 PAGE_SAVE_AS = u'{slug}.html'
 
 # Feed generation is usually not desired when developing
