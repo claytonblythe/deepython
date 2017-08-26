@@ -31,8 +31,7 @@ DEFAULT_PAGINATION = 7
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-THEME="/users/claytonblythe/Desktop/Mega/Data_Science/projects/pelican-themes/elegant"
-
+THEME='/users/claytonblythe/Desktop/Mega/Data_Science/projects/elegantdp'
 
 LANDING_PAGE_ABOUT = {'title': 'Deep Python:  Using Python for Deep Learning',
         'details': """<div itemscope itemtype="http://schema.org/Person"><p>My name

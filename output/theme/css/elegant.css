@@ -278,7 +278,7 @@ ul.articles-timeline .previous-article  {
     margin: 0;
 }
 i.sidebar-social-links {
-    border-radius: 200%;
+    border-radius: 150%;
     border: solid transparent 1px;
     color: #A2A2A2;
     font-size: 2.1em;
@@ -286,7 +286,7 @@ i.sidebar-social-links {
     padding: 1px;
     text-align: center;
     text-decoration: none;
-    width: 60%;
+    width: 30%;
 }
 i.sidebar-social-links:hover {
     background-color: #254601;
