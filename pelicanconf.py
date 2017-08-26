@@ -33,3 +33,7 @@ DEFAULT_PAGINATION = 7
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+THEME="/users/claytonblythe/Desktop/Mega/Data_Science/projects/pelican-themes/elegant"
+
+
+
