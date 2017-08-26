@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Clayton Blythe'
-SITENAME = u""" <span style="color:#254601;">--Deep Python--</span>"""
+SITENAME = u""" <span style="color:#254601;">deepython.com | Clayton Blythe </span>"""
 SITEURL = ''
 
 PATH = 'content'
@@ -24,7 +24,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),)
 
 # Social widget
-SOCIAL = (('LinkedIn', 'http://linkedin.com/claytonblythe'),
+SOCIAL = (('LinkedIn', 'http://linkedin.com/in/claytonblythe'),
           ('Github', 'http://github.com/claytonblythe'),)
 
 DEFAULT_PAGINATION = 7

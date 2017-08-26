@@ -253,6 +253,7 @@ article div.article-content ul:not(.articles-timeline) a:hover {
 .article-content dt {
     font-size: inherit;
 }
+/* Green for header */
 .page-header {
     border-bottom: 1px solid #8f8686;
     color: #254601;
@@ -277,18 +278,18 @@ ul.articles-timeline .previous-article  {
     margin: 0;
 }
 i.sidebar-social-links {
-    border-radius: 20%;
+    border-radius: 200%;
     border: solid transparent 1px;
     color: #A2A2A2;
-    font-size: 1.3em;
+    font-size: 2.1em;
     margin: 0;
     padding: 1px;
     text-align: center;
     text-decoration: none;
-    width: 12%;
+    width: 60%;
 }
 i.sidebar-social-links:hover {
-    background-color: #A2A2A2;
+    background-color: #254601;
     color: #fff;
 }
 i.fa-twitter:hover, i.fa-twitter-square:hover {
@@ -603,4 +604,3 @@ div.figure.align-left, .article-content img.align-left {
     float: left;
     margin-right: 1.5em;
 }
-
