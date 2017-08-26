@@ -58,3 +58,36 @@ LANDING_PAGE_ABOUT = {'title': 'Deep Python:  Using Python for Deep Learning',
        <p>I mostly work in Python within OSX and Linux, but I have also occasionally dabbled in other languages like R, Scala, and Go. </p><p>Besides programming, I like to exercise, go to
        live concerts, tinker with my raspberry pi testingtesting projects, drink beer, and play guitar.
        </p></div>"""}
+
+
+# Landing Page
+PROJECTS = [
+        {
+            'name': 'Movie Colorify',
+            'url':
+            'https://github.com/claytonblythe/movie_colorify',
+            'description': 'A visual color palatte representation of any movie, written in Python'},
+        {
+            'name': 'Wifi Speed Tracking',
+            'url':
+            'https://github.com/claytonblythe/wifi_speed_tracking',
+            'description': 'A wifi speed-logging program'},
+        {
+            'name': 'Computational Nanoscience',
+            'url':
+            'https://github.com/claytonblythe/spectral_analysis',
+            'description': 'Analyzing circularly polarized high harmonic generation in helium'},
+        {
+            'name': 'Historical S&P 500 Performance Analysis ',
+            'url':
+            'https://github.com/claytonblythe/S-P500_outcomes',
+            'description': 'An investigation into historical returns of the S&P 500'},
+        {
+            'name': 'Reddit Image Downloader',
+            'url': 'https://github.com/claytonblythe/subredditTopImagesDownloader',
+            'description': 'Command-line program to download popular images from a subreddit'},
+        {
+            'name': 'Craft Beer Analysis',
+            'url':
+            'https://github.com/claytonblythe/beer_advocate_reccommender',
+            'description': 'Which breweries have the best beer?'}]
