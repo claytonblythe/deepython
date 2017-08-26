@@ -10,8 +10,8 @@ PATH = 'content'
 
 TIMEZONE = 'America/Chicago'
 
-DEFAULT_LANG = 'en'
-
+# Appearance
+DEFAULT_PAGINATION = False
 
 # Defaults
 DEFAULT_CATEGORY = 'Miscellaneous'
@@ -35,7 +35,6 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('LinkedIn', 'http://linkedin.com/in/claytonblythe'),
           ('Github', 'http://github.com/claytonblythe'),)
 
-DEFAULT_PAGINATION = 7
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -58,6 +57,10 @@ LANDING_PAGE_ABOUT = {'title': 'Deep Python:  Using Python for Deep Learning',
        <p>I mostly work in Python within OSX and Linux, but I have also occasionally dabbled in other languages like R, Scala, and Go. </p><p>Besides programming, I like to exercise, go to
        live concerts, tinker with my raspberry pi testingtesting projects, drink beer, and play guitar.
        </p></div>"""}
+
+
+# Legal
+SITE_LICENSE = u'<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">deepython.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://deepython.com" property="cc:attributionName" rel="cc:attributionURL">Clayton Blythe</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.'
 
 
 # Landing Page
