@@ -3,7 +3,6 @@ Date: 2017-8-13 15:01
 Category: General
 
 ## *Deep Python:* A Christening
-
 Python: *A large heavy-bodied nonvenomous constrictor snake occurring throughout the Old World tropics.*
 
 ...Sorry to get your hopes up, but this won't be a discussion about snakes nor our reptilian overlords that run the U.S government.
@@ -15,7 +14,7 @@ Just so you know what's to come, the blog will cover a wider array of topics tha
 
 Anyways, I think that is long enough for my first post. I'll keep it short and sweet, but I have quite a few ideas for posts to come!
 
-Feel free to send me an email at [claytondblythe@gmail.com](claytondblythe@gmail.com) if you have ideas for projects, posts, or suggestions for improvement.
+Feel free to send me an email at [claytondblythe@gmail.com](mailto:claytondblythe@gmail.com) if you have ideas for projects, posts, or suggestions for improvement.
 
 
 Until next time,

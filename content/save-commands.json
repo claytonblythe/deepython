@@ -1,0 +1,4 @@
+{
+    "commands": [
+        "*.md : chrome-cli reload" ]
+}
