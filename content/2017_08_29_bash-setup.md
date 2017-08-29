@@ -25,7 +25,7 @@ Just to specify, for remote shell logins, like an ssh login, Bash will read /etc
 
 For more reading, you can visit the bash manual and user guide [here](http://www.gnu.org/software/bash/manual/bashref.html#Introduction) or another helpful guide [here](http://mywiki.wooledge.org/DotFiles)
 
-I think my setup will most likely include a sourcing of aliases from ~/.aliases within my ~/.bashrc file which is sourced for every terminal session, either login or non-login
+I think my setup will most likely include a sourcing of aliases from ~/.aliases within my ~/.bashrc file which is sourced for every terminal session, either login or non-login sessions. This seems to be a good setup for keeping things tidy and organized. I am open to suggestions and advice if anyone reads this post!
 
 
 Until next time,
