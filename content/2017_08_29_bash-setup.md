@@ -3,7 +3,7 @@ Date: 2017-8-18 22:34
 Category: Other
 status: draft
 
-
+testing
 ## Understanding Bash Startup Files
 
 In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc .bash_profile .profile and what I think the best setup is regarding these files. It is standard for these files to be srotred in the home directory ~ which is described by [Tilde Expansion](http://www.gnu.org/software/bash/manual/bashref.html#Tilde-Expansion). 
