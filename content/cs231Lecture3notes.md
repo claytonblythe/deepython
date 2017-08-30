@@ -10,8 +10,7 @@ I have recently been making my way through the Stanford Computer Science 231n co
 was about defining a loss function for how the Linear Classifier performs across all of the training data,
 and this in a sense quantifies how "unhappy" our scores are across the training data.
 
-The task then is to find a way to efficiently find the parameters (Weights and biases) that minimize and optimize the loss function via some optimization algorithm like Gradient Descent.
-
+The task then is to find a way to efficiently find the parameters (Weights and Biases) that minimize and optimize the loss function via some optimization algorithm like Gradient Descent.
 
 ### Loss Functions
 1. Multiclass SVM Loss
