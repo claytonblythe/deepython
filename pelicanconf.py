@@ -38,7 +38,7 @@ SOCIAL = (('LinkedIn', 'http://linkedin.com/in/claytonblythe'),
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-THEME='/users/claytonblythe/Desktop/Mega/Data_Science/projects/elegantdp'
+THEME='/users/claytonblythe/github/elegantdp'
 
 LANDING_PAGE_ABOUT = {'title': 'Deep Python:  Using Python for Deep Learning',
         'details': """<div itemscope itemtype="http://schema.org/Person"><p>My name
