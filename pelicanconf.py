@@ -38,7 +38,7 @@ SOCIAL = (('LinkedIn', 'http://linkedin.com/in/claytonblythe'),
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-THEME='/users/claytonblythe/Desktop/Mega/Data_Science/projects/elegantdp'
+THEME='/users/claytonblythe/github/elegantdp'
 
 LANDING_PAGE_ABOUT = {'title': 'Deep Python:  Using Python for Deep Learning',
         'details': """<div itemscope itemtype="http://schema.org/Person"><p>My name
@@ -54,7 +54,7 @@ LANDING_PAGE_ABOUT = {'title': 'Deep Python:  Using Python for Deep Learning',
        href="http://linkedin.com/in/claytonblythe" title="LinkedIn
        profile" itemprop="linkedin">LinkedIn.</a> You can also download my <a
        href="http://deepython.com.s3-website.us-east-2.amazonaws.com/august_resume.pdf" title="My resume" itemprop="resume">resume</a> here if you want. </p>
-       <p>I mostly work in Python within OSX and Linux, but I have also occasionally dabbled in other languages like R, Scala, and Go. </p><p>Besides programming, I like to exercise, go to
+       <p>I mostly work in Python within OSX and Linux, but I have also occasionally dabbled in  languages like R, Scala, and Go. </p><p>Besides programming, I like to exercise, go to
        live concerts, tinker with my raspberry pi, drink beer, and play guitar.
        </p></div>"""}
 
