@@ -2,19 +2,17 @@ Title: Spark MLlib Overview
 Date: 2017-8-30 13:10
 Category: Spark 
 
-## *Spark MLib*: An Overview
-
 This is an overview of the Spark MLlib framework, Spark's scalable machine learning library consisting of cmomon learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as underlying basic summary statistics. It also contains various utilities for doing linear algrebra, statistics, and general handling of data. MLlib uses the linear algebra package called Breeze, which depends on the netlib-java for optimized numerical processing. 
 
 So in each area we have:
 
-### Basic Statistics 
+## Basic Statistics 
 *Correlation* computes the correlation matrix for the input Dataset of vectors, and the output will be a DataFrame that contains the correlation matrix of the column of vectors. 
 
 *Hypothesis Testing* is possible thorugh a ChiSquaretest to conduct a Pearson independence test for every feature against the label. For each feature, the feature label pairs are converted into a contingency matrix for which the Chi-squared statistic is computed. 
 
 
-### ML Pipelines
+## ML Pipelines
 Inspired by the scikit-learn project, MLlib standardizes APIs for machine learning algorithms to make it easier to combine multiple algorithms into a single pipeline or workflow. 
 
 *DataFrame* ML API uses DataFrame form Spark SQL as an ML dataset, which can hold a variety of data types.
@@ -25,7 +23,7 @@ Inspired by the scikit-learn project, MLlib standardizes APIs for machine learni
 
 *Pipeline* chains multiple Transformers and Estimators together for a ML workflow.
 
-### Feature Selection & Transformation
+## Feature Selection & Transformation
 
 *TF-IDF* (Term frequency-inverse document frequency) is a feature vectorization method used in text mining to reflec thte importance of a term to a document in the corpus.
 
@@ -52,6 +50,40 @@ Inspired by the scikit-learn project, MLlib standardizes APIs for machine learni
 *Normalizer* is a Transformer which transforms a dataset of Vector rows, normalizing each Vector to have unit norm. It takes some parameter p, which uses the p-norm used for normalization. 
 
 *StandardScaler* transforms a dataset of Vector rows, normalizing each feature to have unit standard deviation and/or zero mean. 
+
+*MinMaxScaler* is often used to rescale a feature to a specific range like [0,1].
+
+*MaxAbsScaler* transforms a dataset of Vector rows to a range of [-1,1].
+
+*Bucketizer* transforms a column of continous features to a column of feature buckets.
+
+*Imputer* is a transformer that completes missing values in a dataset, either using the mean or the median. 
+
+## Feature Selectors
+*VectorSlicer* is a transformer that takes a feature vecotr and outputs a new feature vector with a sub-array of the original features. It is useful for extracting features from a vector column.
+
+*RFormula* selects columns specified by an R model formula, (~, ., +, etc.) 
+
+*ChiSqSelector* uses Chi-Squared tests of independence to decide which features to use, from a fixed number of top features. 
+
+*LSH Algorithms* like Bucketed Random Projection for Euclidian distance and MinHash for Jaccard Distance.
+
+## Classification and Regression
+*Logistic Regression* is supported with summary statistics, as well as multinomial logistic regression.
+
+*DecisionTreeClassifier* is a tree based calssification and regression model and so is *RandomForestClassificationModel* and *GBTClassificationModel*
+
+*MultilayerPerceptronClassifier* is a classifier based on feedforward artificial neural networks, and it consists of fully connected layers that itulize a simoid logistic function and the output layer uses a softmax function. The number of nodes in the output layer corresponds to the number of classes to be classified. 
+
+*LinearSVC* is a support vector machine that represents a hyperplane or set of hyperplanes in a high or infinite dimensional space that can be used for classification, regression, or other tasks. 
+
+*NaiveBayes* allows for simple probabilistic classifiers on applying Bayes' theorem with strong (naive) independence assumptions between the features.  
+
+For regression problems, *LinearRegression* and *GeneralizedLinearRegression* are supported. 
+
+*AFTSurvivalRegression* employs an Accelerated failure time (AFT) model, which is a parametric survival regression model for censored data. It is a log-linear model for survival analysis and is easier to parallelize. 
+
+Other methods like ensembles of decision trees, random forest, and gradient-boosted trees are supported. 
 
 Until next time,
 #### Clayton Blythe | *Deep Python*
