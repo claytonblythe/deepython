@@ -1,7 +1,6 @@
 Title: CS231n: Lecture 3 Cliff Notes
 Date: 2017-8-29 13:10
-Category: Deep Learning
-status: draft
+Category: CS231n Notes
 
 ## *CS231n*: Lecture 3 Notes
 

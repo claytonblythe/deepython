@@ -1,9 +1,9 @@
 Title: Docker on Raspberry Pi
 Date: 2017-8-19 13:10
-Category: Raspberry Pi
-status: draft
+Category: Docker
+Status: draft
 
-## *Raspberry Pi with Docker:* A Short Guide
+*Raspberry Pi with Docker:* A Short Guide
 
 For serving up my website [*Deep Python*](http://deepython.com) from a headless raspberry pi running in my apartment, I wanted to easily deploy docker containers to ensure the stability and scaleability of serving up my website. Here is what you need to do a similar setup:
 
