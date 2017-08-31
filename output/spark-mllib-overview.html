@@ -14,12 +14,12 @@
 
 <meta property="og:title" content="Spark MLlib Overview "/>
 <meta property="og:url" content="/spark-mllib-overview.html" />
-<meta property="og:description" content="This is an overview of the Spark MLlib framework, Spark&#39;s scalable machine learning library consisting of cmomon learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as underlying basic summary statistics. It also contains various utilities for doing linear algrebra, statistics, and …" />
+<meta property="og:description" content="This is an overview of the Spark MLlib framework, Spark&#39;s scalable machine learning library consisting of common machine learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as providing underlying basic summary statistics. It also contains various utilities for doing linear algrebra …" />
 <meta property="og:site_name" content="deepython.com | Clayton Blythe" />
 <meta property="og:article:author" content="Clayton Blythe" />
 <meta property="og:article:published_time" content="2017-08-30T13:10:00-05:00" />
 <meta name="twitter:title" content="Spark MLlib Overview ">
-<meta name="twitter:description" content="This is an overview of the Spark MLlib framework, Spark&#39;s scalable machine learning library consisting of cmomon learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as underlying basic summary statistics. It also contains various utilities for doing linear algrebra, statistics, and …">
+<meta name="twitter:description" content="This is an overview of the Spark MLlib framework, Spark&#39;s scalable machine learning library consisting of common machine learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as providing underlying basic summary statistics. It also contains various utilities for doing linear algrebra …">
 
         <title>Spark MLlib Overview  · deepython.com | Clayton Blythe
 </title>
@@ -68,11 +68,11 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>This is an overview of the Spark MLlib framework, Spark's scalable machine learning library consisting of cmomon learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as underlying basic summary statistics. It also contains various utilities for doing linear algrebra, statistics, and general handling of data. MLlib uses the linear algebra package called Breeze, which depends on the netlib-java for optimized numerical processing. </p>
-<p>So in each area we have:</p>
+            <p>This is an overview of the Spark MLlib framework, Spark's scalable machine learning library consisting of common machine learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as providing underlying basic summary statistics. It also contains various utilities for doing linear algrebra, statistics, and general handling of data. MLlib uses the linear algebra package called Breeze, which depends on the netlib-java for optimized numerical processing. </p>
+<p>Here is a broad overview of the capabilities of Spark MLlib: </p>
 <h2>Basic Statistics</h2>
 <p><em>Correlation</em> computes the correlation matrix for the input Dataset of vectors, and the output will be a DataFrame that contains the correlation matrix of the column of vectors. </p>
-<p><em>Hypothesis Testing</em> is possible thorugh a ChiSquaretest to conduct a Pearson independence test for every feature against the label. For each feature, the feature label pairs are converted into a contingency matrix for which the Chi-squared statistic is computed. </p>
+<p><em>Hypothesis Testing</em> is possible thorugh a ChiSquare test to conduct a Pearson independence test for every feature against the label or target. For each feature, the feature label pairs are converted into a contingency matrix for which the Chi-squared statistic is computed. </p>
 <h2>ML Pipelines</h2>
 <p>Inspired by the scikit-learn project, MLlib standardizes APIs for machine learning algorithms to make it easier to combine multiple algorithms into a single pipeline or workflow. </p>
 <p><em>DataFrame</em> ML API uses DataFrame form Spark SQL as an ML dataset, which can hold a variety of data types.</p>

@@ -2,14 +2,14 @@ Title: Spark MLlib Overview
 Date: 2017-8-30 13:10
 Category: Spark 
 
-This is an overview of the Spark MLlib framework, Spark's scalable machine learning library consisting of cmomon learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as underlying basic summary statistics. It also contains various utilities for doing linear algrebra, statistics, and general handling of data. MLlib uses the linear algebra package called Breeze, which depends on the netlib-java for optimized numerical processing. 
+This is an overview of the Spark MLlib framework, Spark's scalable machine learning library consisting of common machine learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as providing underlying basic summary statistics. It also contains various utilities for doing linear algrebra, statistics, and general handling of data. MLlib uses the linear algebra package called Breeze, which depends on the netlib-java for optimized numerical processing. 
 
-So in each area we have:
+Here is a broad overview of the capabilities of Spark MLlib: 
 
 ## Basic Statistics 
 *Correlation* computes the correlation matrix for the input Dataset of vectors, and the output will be a DataFrame that contains the correlation matrix of the column of vectors. 
 
-*Hypothesis Testing* is possible thorugh a ChiSquaretest to conduct a Pearson independence test for every feature against the label. For each feature, the feature label pairs are converted into a contingency matrix for which the Chi-squared statistic is computed. 
+*Hypothesis Testing* is possible thorugh a ChiSquare test to conduct a Pearson independence test for every feature against the label or target. For each feature, the feature label pairs are converted into a contingency matrix for which the Chi-squared statistic is computed. 
 
 
 ## ML Pipelines
