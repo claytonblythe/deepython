@@ -16,14 +16,14 @@ The task then is to find a way to efficiently find the parameters (Weights and B
 2. Softmax Classifier: (Cross-Entropy Loss / Multinomial Logistic Regression)
 
 
-#### *Multiclass SVM Loss*:
+### *Multiclass SVM Loss*:
 
  The average across all the differences of the scores between the correct class and incorrect classes with a constant of one added. 1/N * Sigma { ((Incorrect class score  - Correct class score) + 1)} . Using a value of one here is
 arbitrary and really just determines what magnitude the weights can be.
 
 Here when we initialize the weights, they are chosen to be small numbers, so in this case the initial value for the loss will be 2. W values can be multiplied and they could be twice as large and achieve the same Loss (ignoring bias).
 
-#### *Weight Regularization*:
+### *Weight Regularization*:
 
  A set of techniques to add objectives to the loss, to tradeoff between training error and generalization error. i.e. a trade off between bias and variance 
 The most common form of regularization is L2 regularization, also known as weight decay. This pushes the weights to being smaller and more diffused across all pixels and features, which prevents overfitting, leading to better generalization performance.
@@ -32,7 +32,7 @@ Including this weight regularization in the loss function that you are trying to
 
 Why would we want more evenly spread weights? This allows for taking in more parts and features of the input image into account.
 
-#### *Softmax Loss*:
+### *Softmax Loss*:
 Softmax Loss is a different functional form for how loss is specified across scores. This assumes that the scores are unormalized log probabilities for each class. To get probabilities for each class,
 we take the exponentiated scores for each element divided by the sum of all exponentiated elements. So here we want to maximize the log likelihood, or for a loss function we want to
 minimize the negative log likelihood of the correct class. It turns out that maximizing this is more mathematically conducive than maximizing the negative probabilities themselves.
@@ -44,14 +44,14 @@ the loss should be -log( 1 / # of classes ). As the model trains, the loss shoul
 Optimization occurs by finding the gradient of the loss function with respect to certain parameters, usually the weights for each class. In practice an analytic gradient is used, which is an exact, fast, but error-prone method.
 You often then do a gradient check, where you compare the numerical gradient which is usually approximate, slow, but easy to write compared to your analytic gradient.
 
-#### *Stochastic Gradient Descent*:
+### *Stochastic Gradient Descent*:
 This process is usually composed of two steps:
   1. Find the weights gradient by evaluating the gradient of the loss function with respect to data, weights
   2. Set new weights by multiplying step size (a.k.a. learning rate) by the gradient of the loss function with respect to weights, in the direction of the negative gradient. The gradient points in the direction of maximal increase, so the negative gradient will lead to minimizing the loss function, or at least moving toward some local or global minimum.
 
 Your learning rate / step size are an important hyperparameter for this.
 
-#### *Mini-batch Gradient Descent*:
+### *Mini-batch Gradient Descent*:
 Instead of using all training samples for each iteration (finding the gradient of the loss function corresponding to all your training data), you can use a small *batch* size comprised of a small subset of your training data. Then you can get a good approximation of the gradient and use smaller step sizes rather than using a full-batch size for each iteration or epoch.
 Often this isn't a very significant hyperparameter to tune, but rather you choose this based on your GPU architecture and the constraints of your memory.
 The key is finding the appropriate learning rate to converge over time across epochs (iterations).
