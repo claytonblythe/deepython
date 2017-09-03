@@ -1,5 +1,5 @@
-Title: CS231n Lecture 4 Cliff Notes
-Date: 2017-9-4 13:10
+Title: Lecture 4 Notes
+Date: 2017-9-3 13:10
 Category: CS231n 
 
 ## *CS231n*: Lecture 4 Notes
