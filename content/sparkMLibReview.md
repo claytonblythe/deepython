@@ -2,7 +2,7 @@ Title: Spark MLlib Overview
 Date: 2017-8-30 13:10
 Category: Spark 
 
-This is an overview of the Spark MLlib framework, Spark's scalable machine learning library consisting of common machine learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as providing underlying basic summary statistics. It also contains various utilities for doing linear algrebra, statistics, and general handling of data. MLlib uses the linear algebra package called Breeze, which depends on the netlib-java for optimized numerical processing. 
+This is an overview of the Spark MLlib framework, Spark's scalable machine learning library consisting of common machine learning algorithms and utilities that include tools for classification, regression, clustering, collaborative filtering, dimensionality reduction, as well as providing underlying basic summary statistics. It also contains various utilities for doing linear algrebra, statistics, and general handling of data. MLlib uses the linear algebra package called Breeze, which depends on the netlib-java for optimized numerical processing. Spark MLlib is distinct from Spark ML, as it deals with RDD (Resilient Distributed Datasets) instead of DataFrames. RDD's are fundamental data structures of Spark, which are divided into logical partitions and distributed across different nodes of a cluster. Spark makes use of the concept of RDD to achieve faster and more efficient MapReduce operations. It is also fault tolerant as well as in-memory data processing, which is 10 to 100 times faster than network and Disk.   
 
 Here is a broad overview of the capabilities of Spark MLlib: 
 
