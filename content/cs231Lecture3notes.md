@@ -56,10 +56,12 @@ Instead of using all training samples for each iteration (finding the gradient o
 Often this isn't a very significant hyperparameter to tune, but rather you choose this based on your GPU architecture and the constraints of your memory.
 The key is finding the appropriate learning rate to converge over time across epochs (iterations).
 
-Different optimization algorithms perform differently on different problems.
+The loss function can be thought of as an optimization problem in high-dimensional space, in which we are trying to reach the bottom of some high-dimensional valley. We start with some random initialization of weights and through iterative differentiation and adjustement we can reach the bottom. The next important concept to cover will be backprogation, essentially how to compute the gradient analytically using the chain rule. 
 
-The advancements recently (since roughly 2012) of using neural networks are that you do not have to hand-craft features regarding your images, but rather you can train your entire network and feature
+
+The advancements recently (since roughly 2012) of using these techniques for neural networks are that you do not have to hand-craft features regarding your images, but rather you can train your entire network and feature
 extraction without explicitly programming the structure of different features or objects into some rule-based recognition system. Here the networks can be trained all the way back to the raw pixels, which make them very powerful and flexible.
+
 
 Until next time,
 #### Clayton Blythe | *Deep Python*
