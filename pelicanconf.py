@@ -45,12 +45,12 @@ LANDING_PAGE_ABOUT = {'title': 'Deep Python:  Using Python for Deep Learning',
         is <span itemprop="name">Clayton Blythe</span>.<p>I am a 22 year old guy working for <a href="http://ford.com/"
         title="Ford Motor Company" itemprop="affiliation">Ford Motor Company</a> as a Machine Learning / Artificial Intelligence Scientist. I play a broad role there, which
         includes research, product development, engineering and deployment for a variety of data intensive projects such as cybersecurity, customer interaction,
-        and autonomous vehicle detection initiatives.
+        and autonomous vehicle itiatives.
         </p>You can take a look at my <a href="https://github.com/claytonblythe/" title="Github
        profile" itemprop="url"><span itemprop="nickname">Github profile</span></a>, reach out to me
        at my personal email <a
        href="mailto:claytondblythe@gmail.com" title="personal email
-       " itemprop="email">claytondblythe@gmail.com</a>, or mesage me on <a
+       " itemprop="email">claytondblythe@gmail.com</a>, or message me on <a
        href="http://linkedin.com/in/claytonblythe" title="LinkedIn
        profile" itemprop="linkedin">LinkedIn.</a> You can also download my <a
        href="http://deepython.com.s3-website.us-east-2.amazonaws.com/august_resume.pdf" title="My resume" itemprop="resume">resume</a> if you want. </p>
