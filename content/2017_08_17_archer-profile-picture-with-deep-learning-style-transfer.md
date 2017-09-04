@@ -1,6 +1,8 @@
 Title: Deep Archer
 Date: 2017-8-17 19:56
 Category: Deep Learning
+tags: python, archer, neural style
+
 ## *Deep Archer: Style Transfer for a Hip Profile Picture*
 
 This is a post about using an interesting technique that is coming out of deep learning, called style transfer,

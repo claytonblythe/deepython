@@ -36,6 +36,22 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('LinkedIn', 'http://linkedin.com/in/claytonblythe'),
           ('Github', 'http://github.com/claytonblythe'),)
 
+PLUGIN_PATHS=['/Users/claytonblythe/github/pelican-plugins']
+PLGINS=['tipque_search', 'sitemap']
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
