@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Clayton Blythe'
 SITENAME = u""" <span style="color:#254601;">deepython.com | Clayton Blythe </span>"""
-SITEURL = ''
+SITEURL='http://deepython.com.s3-website.us-east-2.amazonaws.com/'
+#SITEURL='http://localhost:8000'
 
 PATH = 'content'
 
