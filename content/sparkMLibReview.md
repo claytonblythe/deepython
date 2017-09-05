@@ -85,6 +85,12 @@ For regression problems, *LinearRegression* and *GeneralizedLinearRegression* ar
 
 Other methods like ensembles of decision trees, random forest, and gradient-boosted trees are supported. 
 
+## Clustering
+*K-Means* is a popular used clustering algorithm that clusters the data points into a predefined number of clusters. The MLlib implementation includes a parallelized variant of the k-means++ method. 
+
+*Latent Dirichlet Allocation*, *Bisecting k-means*, and *Gaussian Mixture Model (GMM)* are all supported as well.  
+
+
 Until next time,
 #### Clayton Blythe | *Deep Python*
 
