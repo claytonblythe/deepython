@@ -1,8 +1,6 @@
-Title: Lecture 4 Notes
+Title: CS231n Lecture 4 Notes
 Date: 2017-9-3 13:10
 Category: CS231n 
-
-## *CS231n*: Lecture 4 Notes
 
 The purpose of this lecture was to introduce the imporatance and basic functioning of an fundamental concept in neural networks, backprogation. In short, backpropagation is a method for computing the gradients of weights and biases through recursive application of the chain rule in multivariable calculus. 
 

@@ -1,8 +1,6 @@
-Title: Lecture 3 Notes
+Title: CS231n Lecture 3 Notes
 Date: 2017-8-29 13:10
 Category: CS231n
-
-## *CS231n*: Lecture 3 Notes
 
 
 I have recently been making my way through the Stanford Computer Science 231n course. This particular lecture
