@@ -8,6 +8,10 @@ The purpose of this lecture was to introduce the imporatance and basic functioni
 
 Most of this section can be understood by reviewing the concept of computing derivatives through the chain rule. The name "backpropagation" is referring to how the chain rule is applied recursively backwards through the circuit and can be thought of as gates communicating to each other whether they want their outputs to increase or decrease, so as to make the final output value higher. 
 
+The *forward pass* computes values from input to output, and the *backward pass* starts at the end and recursively applies the chain rule to compute the gradients. So the gradients can be thought of as flowing backwards through the circuit. 
+
+So understanding backpropagation is mainly local, in that you only need the output value of the gate and the local gradient of its inputs with respect to its output value. Backpropagation can also be thought of as gates communicating with each other, whether they want their outputs to increase or decrease so as to make the final output value higher. 
+
 The lecture then uses an example with the [sigmoid activation function](https://en.wikipedia.org/wiki/Activation_function)
 
 Patterns in backward flow:
