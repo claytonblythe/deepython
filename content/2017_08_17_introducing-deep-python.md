@@ -1,6 +1,7 @@
 Title: Introducing Deep Python
 Date: 2017-8-13 15:01
 Category: General
+tags: introduction, python
 
 ## *Deep Python:* A Christening
 Python: *A large heavy-bodied nonvenomous constrictor snake occurring throughout the Old World tropics.*

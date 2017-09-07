@@ -1,6 +1,7 @@
 Title: Lecture 4 Notes
 Date: 2017-9-3 13:10
 Category: CS231n 
+tags: cs231n, python, notes, neural networks
 
 ## *CS231n*: Lecture 4 Notes
 

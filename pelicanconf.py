@@ -4,15 +4,18 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Clayton Blythe'
 SITENAME = u""" <span style="color:#254601;">deepython.com | Clayton Blythe </span>"""
-SITEURL='http://deepython.com.s3-website.us-east-2.amazonaws.com/'
-#SITEURL='http://localhost:8000'
-
+#SITEURL='http://deepython.com.s3-website.us-east-2.amazonaws.com/'
+SITEURL='http://localhost:8000'
 PATH = 'content'
 
+# Elegant theme
+STATIC_PATHS = ['theme/images', 'images']
+DIRECT_TEMPLATES = (('index', 'tags', 'categories', 'archives', 'search', '404'))
+USE_SHORTCUT_ICONS= True
 TIMEZONE = 'America/Chicago'
 
 # Appearance
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = True
 
 # Defaults
 DEFAULT_CATEGORY = 'Miscellaneous'

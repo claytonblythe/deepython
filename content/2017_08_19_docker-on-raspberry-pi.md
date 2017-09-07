@@ -2,6 +2,7 @@ Title: Docker on Raspberry Pi
 Date: 2017-8-19 13:10
 Category: Docker
 Status: draft
+tags: raspberry pi, docker
 
 *Raspberry Pi with Docker:* A Short Guide
 
