@@ -10,18 +10,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="docker, version control, Docker, " />
+<meta name="keywords" content="cs231n, python, notes, neural networks, CS231n, " />
 
-<meta property="og:title" content="Docker 101 "/>
-<meta property="og:url" content="http://localhost:8000/drafts/docker-101.html" />
-<meta property="og:description" content="&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Docker is an up and coming tool used for ======= This is a post about what docker is and how you can use it to be more efficient in your work. With machine learning and deep learning, it can be difficult to keep all the dependencies straight, like specific versions …" />
+<meta property="og:title" content="CS231n Lecture 4 Notes "/>
+<meta property="og:url" content="http://localhost:8000/cs231n-lecture-4-notes.html" />
+<meta property="og:description" content="The purpose of this lecture was to introduce the imporatance and basic functioning of an fundamental concept in neural networks, backprogation. In short, backpropagation is a method for computing the gradients of weights and biases through recursive application of the chain rule in multivariable calculus. Most of this section can …" />
 <meta property="og:site_name" content="deepython.com | Clayton Blythe" />
 <meta property="og:article:author" content="Clayton Blythe" />
-<meta property="og:article:published_time" content="2017-08-18T22:34:00-05:00" />
-<meta name="twitter:title" content="Docker 101 ">
-<meta name="twitter:description" content="&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD Docker is an up and coming tool used for ======= This is a post about what docker is and how you can use it to be more efficient in your work. With machine learning and deep learning, it can be difficult to keep all the dependencies straight, like specific versions …">
+<meta property="og:article:published_time" content="2017-09-03T13:10:00-05:00" />
+<meta name="twitter:title" content="CS231n Lecture 4 Notes ">
+<meta name="twitter:description" content="The purpose of this lecture was to introduce the imporatance and basic functioning of an fundamental concept in neural networks, backprogation. In short, backpropagation is a method for computing the gradients of weights and biases through recursive application of the chain rule in multivariable calculus. Most of this section can …">
 
-        <title>Docker 101  · deepython.com | Clayton Blythe
+        <title>CS231n Lecture 4 Notes  · deepython.com | Clayton Blythe
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -70,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://localhost:8000/drafts/docker-101.html"> Docker 101  </a></h1>
+    <h1><a href="http://localhost:8000/cs231n-lecture-4-notes.html"> CS231n Lecture 4 Notes  </a></h1>
     </header>
 </div>
 
@@ -78,32 +78,21 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Docker is an up and coming tool used for 
-=======
-This is a post about what docker is and how you can use it to be more efficient in your work. With machine learning and deep learning, it can be difficult to keep all the dependencies straight, like specific versions of linux, python, package versions etc. </p>
-<p>Over the past few years, tools have become more popular for developing reproducible environments for doing reproducible research and also deployment (DevOps). With Docker, an <em>image</em> can be specified, which is essentially a blueprint for an isolated environment
- called a container. With Docker, it is possible to use these images to create <em>containers</em> which are launched and allow for you to know exactly what type of system, versions, and software it contains. </p>
-<p>Docker containers are a layer that allows for making Linux containers easier to use. It is also OS agnostic, so you can use it on Mac, Windows, and Linux. </p>
-<p>So say you want to share the PyTorch project that you worked on a few weeks ago, and others need the ability to reproduce your work, or maybe you need to launch it as some type of service. That can be quickly spun up and reliable. This is where Docker containers become very useful. </p>
-<p>One use that I frequently use Docker for is launching a Pytorch Jupyter Notebook server. Here I can quickly launch new experiments,make commits to git repositories when I make progress, and just remove the container at the end without being worried about reproducing some working environment. </p>
-<p>Another use that I find useful is for reproducing a personalized environment with your own bash aliases and profile, Github repositories and basic software. I have a Dockerfile that runs vanilla ubuntu with basic things like conda, python3.6, git, vim, pip, and pelican. Then it clones Github repositories for projects that I am working on and my dotfiles (.bashrc .bash_profile .aliases), vim configuration and basically reproduces my own environment almost instantly. This allows me to be comfortable working on any machine with Docker installed, as I can quickly reproduce my desired and personalized most up-to-date environment. </p>
-<p>Examples of this can be found on my Github profile in the <a href="https://github.com/claytonblythe/Dockerfiles">dockerfiles repository</a></p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>18df69a9beb563cdfc645fd01341788ea7fd6641</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
+            <p>The purpose of this lecture was to introduce the imporatance and basic functioning of an fundamental concept in neural networks, backprogation. In short, backpropagation is a method for computing the gradients of weights and biases through recursive application of the chain rule in multivariable calculus. </p>
+<p>Most of this section can be understood by reviewing the concept of computing derivatives through the chain rule. The name "backpropagation" is referring to how the chain rule is applied recursively backwards through the circuit and can be thought of as gates communicating to each other whether they want their outputs to increase or decrease, so as to make the final output value higher. </p>
+<p>The <em>forward pass</em> computes values from input to output, and the <em>backward pass</em> starts at the end and recursively applies the chain rule to compute the gradients. So the gradients can be thought of as flowing backwards through the circuit. </p>
+<p>So understanding backpropagation is mainly local, in that you only need the output value of the gate and the local gradient of its inputs with respect to its output value. Backpropagation can also be thought of as gates communicating with each other, whether they want their outputs to increase or decrease so as to make the final output value higher. </p>
+<p>The lecture then uses an example with the <a href="https://en.wikipedia.org/wiki/Activation_function">sigmoid activation function</a></p>
+<p>Patterns in backward flow:
+1. Add
+2. Multiply
+3. Maximum</p>
+<p>The <em>add gate</em> always takes the gradient on its output and distributes it equally to all of its inputs, regardless of what thier values were during the forward pass. </p>
+<p>The <em>multiply gate</em> has local gradients as input values, and this is multiplied on its output during the chain rule.</p>
+<p>The <em>max gate</em> routes the gradient, distributing the gradient to exactly one of its inputs. </p>
+<p>Summary: This section provided intuition for what the gradients mean, and how they flow backwards through the circuit, determining which parts of the circuit (weights and biases) shoudl increase or decrease to force the final output higher. It also discussed <em>staged computation</em> for implementing backpropagation. The idea is to break up your function into modules to derive local gradients and then chain them. The key is to decompose expressions into stages such that you can
+differentiate each stage independently one step at a time. </p>
+<p>The next section will start discussion neural networks and how backpropagation allows for efficiently computing the gradients of the connections with respect to a loss function. </p>
 <p>Until next time,</p>
 <h4>Clayton Blythe | <em>Deep Python</em></h4>
             
@@ -113,15 +102,22 @@ This is a post about what docker is and how you can use it to be more efficient 
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2017-08-18T22:34:00-05:00">Aug 18, 2017</time>
+            <time pubdate="pubdate" datetime="2017-09-03T13:10:00-05:00">Sep 3, 2017</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://localhost:8000/categories.html#docker-ref">Docker</a>
+            <a class="category-link" href="http://localhost:8000/categories.html#cs231n-ref">CS231n</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://localhost:8000/tags.html#docker-ref">docker
+                <li><a href="http://localhost:8000/tags.html#cs231n-ref">cs231n
+                    <span>2</span>
 </a></li>
-                <li><a href="http://localhost:8000/tags.html#version-control-ref">version control
-                    <span>1</span>
+                <li><a href="http://localhost:8000/tags.html#neural-networks-ref">neural networks
+                    <span>3</span>
+</a></li>
+                <li><a href="http://localhost:8000/tags.html#notes-ref">notes
+                    <span>2</span>
+</a></li>
+                <li><a href="http://localhost:8000/tags.html#python-ref">python
+                    <span>5</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
