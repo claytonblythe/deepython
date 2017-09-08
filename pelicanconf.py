@@ -3,7 +3,7 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Clayton Blythe'
-SITENAME = u""" <span style="color:#254601;">deepython.com <img src="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/android-chrome-512x512.png" width="32" height="32"> Clayton Blythe </span> """
+SITENAME = u""" <span style="color:#254601;">deepython.com <img src="/theme/images/android-chrome-512x512.png" width="32" height="32"> Clayton Blythe </span> """
 SITEURL='http://deepython.com.s3-website.us-east-2.amazonaws.com/'
 #SITEURL='http://localhost:8000'
 PATH = 'content'
