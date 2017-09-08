@@ -1,9 +1,7 @@
-Title: Deep Learning 101
+Title: Deep Learning 101: A Brief Introduction
 Date: 2017-8-18 22:19
 Category: Deep Learning
 tags: python, neural networks, intro
-
-## *Deep Learning 101: A Brief Introduction*
 
 So you want to learn about Deep Learning huh?
 
