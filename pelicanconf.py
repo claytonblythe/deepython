@@ -3,9 +3,9 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Clayton Blythe'
-SITENAME = u""" <span style="color:#254601;">deepython.com <img src="/theme/images/android-chrome-512x512.png" width="32" height="32"> Clayton Blythe </span> """
-SITEURL='http://deepython.com.s3-website.us-east-2.amazonaws.com/'
-#SITEURL='http://localhost:8000'
+SITENAME = u"""<img src="/theme/images/android-chrome-512x512.png" width="42" height="42">  <span style="color:#254601; font-size:17pt">  deepython.com </span> """
+#SITEURL='http://deepython.com.s3-website.us-east-2.amazonaws.com/'
+SITEURL='http://localhost:8000'
 PATH = 'content'
 
 # Elegant theme
@@ -73,7 +73,7 @@ LANDING_PAGE_ABOUT = {'title': 'Deep Python:  Using Python for Deep Learning',
        " itemprop="email">claytondblythe@gmail.com</a>, or message me on <a
        href="http://linkedin.com/in/claytonblythe" title="LinkedIn
        profile" itemprop="linkedin">LinkedIn.</a> You can also download my <a
-       href="http://deepython.com.s3-website.us-east-2.amazonaws.com/august_resume.pdf" title="My resume" itemprop="resume">resume</a> if you want. </p>
+       href="/august_resume.pdf" title="My resume" itemprop="resume">resume</a> if you want. </p>
        <p>I mostly work in Python within OSX and Linux, but I have also occasionally dabbled in  languages like R, Scala, and Go. This blog will be primarily about using Python for deep learning, but I will likely delve into a wide variety of topics. It also will serve as a place for me to gather and organize my learning process. </p><p>Besides programming, I like to exercise, go to
        live concerts, tinker with my raspberry pi, drink beer, and play guitar.
        </p></div>"""}
