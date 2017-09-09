@@ -12,16 +12,16 @@
 
 <meta name="keywords" content="raspberry pi, python, web scraping, soccer, Other, " />
 
-<meta property="og:title" content="Sending Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio "/>
-<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/sending-manchester-united-game-reminders-with-python-raspberry-pi-beautiful-soup-and-twilio.html" />
-<meta property="og:description" content="Somewhat surprisingly, I find that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of classes. However, now that I have this free time …" />
+<meta property="og:title" content="Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio "/>
+<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/manchester-united-game-reminders-with-python-raspberry-pi-beautiful-soup-and-twilio.html" />
+<meta property="og:description" content="Suprisingly, I have found that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of classes. However, now that I have this free time …" />
 <meta property="og:site_name" content="deepython.com" />
 <meta property="og:article:author" content="Clayton Blythe" />
 <meta property="og:article:published_time" content="2017-09-09T13:10:00-05:00" />
-<meta name="twitter:title" content="Sending Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio ">
-<meta name="twitter:description" content="Somewhat surprisingly, I find that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of classes. However, now that I have this free time …">
+<meta name="twitter:title" content="Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio ">
+<meta name="twitter:description" content="Suprisingly, I have found that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of classes. However, now that I have this free time …">
 
-        <title>Sending Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio  · deepython.com
+        <title>Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio  · deepython.com
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -70,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/sending-manchester-united-game-reminders-with-python-raspberry-pi-beautiful-soup-and-twilio.html"> Sending Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio  </a></h1>
+    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/manchester-united-game-reminders-with-python-raspberry-pi-beautiful-soup-and-twilio.html"> Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio  </a></h1>
     </header>
 </div>
 
@@ -78,9 +78,14 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Somewhat surprisingly, I find that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of classes. However, now that I have this free time, I have started to follow sports more, specifically the English Premier League and NCAA Football. </p>
+            <p>Suprisingly, I have found that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of classes. However, now that I have this free time, I have started to follow sports more, specifically the English Premier League and NCAA Football. </p>
 <p>My favorite team in the English Premier League is Manchester United, however I didn't want to have to periodically check online when they play next. So I built a simple web
 scraping service with python to parse Manchester United's upcoming schedule and text it to my iphone every couple of days. </p>
+<p>I have the python script redDevilNotify.py running every two days on my Raspberry Pi which uses a Raspian Linux Distribution for the operating system. The Raspberry Pi is powered on 24/7 in my apartment, but it is very efficient and doesn't use much energy. 
+The script uses the beautifulsoup python library to scrape Manchester United's website for upcoming games, parses them, converts the dates to EST and then uses the Twilio API to text me a reminder message. </p>
+<p>Crontab scheduling is used to run the script as follows, and you can edit this with the command bash:::crontab -e</p>
+<p>0 9 */2 * * /usr/bin/python3 /path/to/redDevilNotify.py </p>
+<p>This means that the script will run on the zeroth minute of the ninth hour every two days for every week and month. </p>
 <p><a href="https://github.com/claytonblythe/RedDevilNotify">Github Repo</a></p>
 <p>Until next time,</p>
 <h4>Clayton Blythe | <em>Deep Python</em></h4>

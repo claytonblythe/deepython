@@ -62,7 +62,7 @@ THEME='/users/claytonblythe/github/elegantdp'
 
 LANDING_PAGE_ABOUT = {'title': 'Python and Deep Learning',
         'details': """<div itemscope itemtype="http://schema.org/Person"><p>My name
-        is <span itemprop="name">Clayton Blythe</span>.<p>I am a 22 year old guy working for <a href="http://ford.com/"
+        is <span itemprop="name">Clayton Blythe</span>.<p>I am a year old guy working for <a href="http://ford.com/"
         title="Ford Motor Company" itemprop="affiliation">Ford Motor Company</a> as a Machine Learning / Artificial Intelligence Scientist. I play a broad role there, which
         includes research, product development, engineering and deployment for a variety of data intensive projects such as cybersecurity, customer interaction,
         and autonomous vehicle itiatives.
