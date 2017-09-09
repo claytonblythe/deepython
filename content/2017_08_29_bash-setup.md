@@ -1,6 +1,6 @@
-Title: Bash Environment Personalization 
+Title: Personalized Bash Environment 
 Date: 2017-8-18 22:34
-Category: Other
+Category: Bash
 tags: bash, version control
 
 ## Understanding Bash Startup Files

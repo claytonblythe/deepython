@@ -10,18 +10,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="python, archer, neural style, Deep Learning, " />
+<meta name="keywords" content="bash, version control, Bash, " />
 
-<meta property="og:title" content="Deep Archer: Neural Style Transfer for a Hip Profile Picture "/>
-<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/deep-archer-neural-style-transfer-for-a-hip-profile-picture.html" />
-<meta property="og:description" content="This is a post about using an interesting technique that is coming out of deep learning, called style transfer, to make a profile picture for myself using the Archer cartoon animation style, to change the look of my profile picture for my company&#39;s internal slack channel. Neural Networks are getting …" />
+<meta property="og:title" content="Personalized Bash Environment "/>
+<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/personalized-bash-environment.html" />
+<meta property="og:description" content="Understanding Bash Startup Files In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc .bash_profile .profile …" />
 <meta property="og:site_name" content="deepython.com" />
 <meta property="og:article:author" content="Clayton Blythe" />
-<meta property="og:article:published_time" content="2017-08-17T19:56:00-05:00" />
-<meta name="twitter:title" content="Deep Archer: Neural Style Transfer for a Hip Profile Picture ">
-<meta name="twitter:description" content="This is a post about using an interesting technique that is coming out of deep learning, called style transfer, to make a profile picture for myself using the Archer cartoon animation style, to change the look of my profile picture for my company&#39;s internal slack channel. Neural Networks are getting …">
+<meta property="og:article:published_time" content="2017-08-18T22:34:00-05:00" />
+<meta name="twitter:title" content="Personalized Bash Environment ">
+<meta name="twitter:description" content="Understanding Bash Startup Files In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc .bash_profile .profile …">
 
-        <title>Deep Archer: Neural Style Transfer for a Hip Profile Picture  · deepython.com
+        <title>Personalized Bash Environment  · deepython.com
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -70,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/deep-archer-neural-style-transfer-for-a-hip-profile-picture.html"> Deep Archer: Neural Style Transfer for a Hip Profile Picture  </a></h1>
+    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/personalized-bash-environment.html"> Personalized Bash Environment  </a></h1>
     </header>
 </div>
 
@@ -78,19 +78,18 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>This is a post about using an interesting technique that is coming out of deep learning, called style transfer,
-to make a profile picture for myself using the <em>Archer</em> cartoon animation style, to change the look of my profile picture for my company's internal slack channel.</p>
-<p>Neural Networks are getting pretty advanced, so much so that they can transfer the style of <a href="https://github.com/lengstrom/fast-style-transfer">one image onto another.</a> Naturally, I this would be a fun project for me to explore the area of deep learning in Python. Let's go!!</p>
-<p>This post will be discussion the most recent papers that have come out in the past couple years, called <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Image Style Transfer Using Convolutional Neural Networks
-</a> and <a href="https://arxiv.org/pdf/1609.04802">Perceptual Losses for Real-Time Style Transfer and Super-Resolution
-</a></p>
-<p>How about that for some light reading..heh</p>
-<p>So here are the following topics that are the main concepts allowing this type of deep neural network style transfer, and they will allow us to make new art!</p>
-<h2>Key concepts for this post:</h2>
-<h4>1. Artificial Neural Networks</h4>
-<h4>2. Convolutional Recurrent Neural Networks (CNNs)</h4>
-<h4>3. Deep Learning</h4>
-<hr>
+            <h2>Understanding Bash Startup Files</h2>
+<p>In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc .bash_profile .profile and what I think the best setup is regarding these files. It is standard for these files to be srotred in the home directory ~ which is described by <a href="http://www.gnu.org/software/bash/manual/bashref.html#Tilde-Expansion">Tilde Expansion</a>. </p>
+<p>It is helpful to think about how Bash chronologically behaves when it is invoked as a interactive login session. When Bash is invoked as an interactive login shell, it first reads from the file /etc/profile if that file exists. After reading that file, it will look for a file at ~/.bash_profile, ~/.bash_login, and ~/.profile in that order. It will execute commands from the first one that is available if it exists, and will not proceed unless explicitly told so. </p>
+<p>If Bash is invoked as an interactive non-login session, then Bash reads and executes commands from ~/.bashrc, if that file exists. Therefore it is common to include the following commands in ~/.bash_profile, as it is often desired to ensure that ~/.bashrc is executed regardless of whether Bash is executed in a login or non-login session.  </p>
+<p>:::bash
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi</p>
+<p>So here in ~/.bashrc you can put all various starting configurations like your PATH and you can source a file containing aliases like ~/.aliases every time you have a terminal session, whether it is a login session or simply another window. </p>
+<p>Just to specify, for remote shell logins, like an ssh login, Bash will read /etc/profile and then one of ~/.bash_profile or ~/.profile. </p>
+<p>For more reading, you can visit the bash manual and user guide <a href="http://www.gnu.org/software/bash/manual/bashref.html#Introduction">here</a> or another helpful guide <a href="http://mywiki.wooledge.org/DotFiles">here</a></p>
+<p>I think my setup will most likely include a sourcing of aliases from ~/.aliases within my ~/.bashrc file which is sourced for every terminal session, either login or non-login sessions. This seems to be a good setup for keeping things tidy and organized. I am open to suggestions and advice if anyone reads this post!</p>
 <p>Until next time,</p>
 <h4>Clayton Blythe | <em>Deep Python</em></h4>
             
@@ -100,19 +99,16 @@ to make a profile picture for myself using the <em>Archer</em> cartoon animation
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2017-08-17T19:56:00-05:00">Aug 17, 2017</time>
+            <time pubdate="pubdate" datetime="2017-08-18T22:34:00-05:00">Aug 18, 2017</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/categories.html#deep-learning-ref">Deep Learning</a>
+            <a class="category-link" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/categories.html#bash-ref">Bash</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#archer-ref">archer
-                    <span>1</span>
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#bash-ref">bash
+                    <span>2</span>
 </a></li>
-                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#neural-style-ref">neural style
-                    <span>1</span>
-</a></li>
-                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#python-ref">python
-                    <span>7</span>
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#version-control-ref">version control
+                    <span>3</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

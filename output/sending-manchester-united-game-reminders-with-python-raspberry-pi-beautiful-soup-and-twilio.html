@@ -10,18 +10,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="bash, version control, Other, " />
+<meta name="keywords" content="raspberry pi, python, web scraping, soccer, Other, " />
 
-<meta property="og:title" content="Bash Environment Personalization "/>
-<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/drafts/bash-environment-personalization.html" />
-<meta property="og:description" content="Understanding Bash Startup Files In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc .bash_profile .profile …" />
+<meta property="og:title" content="Sending Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio "/>
+<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/sending-manchester-united-game-reminders-with-python-raspberry-pi-beautiful-soup-and-twilio.html" />
+<meta property="og:description" content="Somewhat surprisingly, I find that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of classes. However, now that I have this free time …" />
 <meta property="og:site_name" content="deepython.com" />
 <meta property="og:article:author" content="Clayton Blythe" />
-<meta property="og:article:published_time" content="2017-08-18T22:34:00-05:00" />
-<meta name="twitter:title" content="Bash Environment Personalization ">
-<meta name="twitter:description" content="Understanding Bash Startup Files In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc .bash_profile .profile …">
+<meta property="og:article:published_time" content="2017-09-09T13:10:00-05:00" />
+<meta name="twitter:title" content="Sending Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio ">
+<meta name="twitter:description" content="Somewhat surprisingly, I find that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of classes. However, now that I have this free time …">
 
-        <title>Bash Environment Personalization  · deepython.com
+        <title>Sending Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio  · deepython.com
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -70,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/drafts/bash-environment-personalization.html"> Bash Environment Personalization  </a></h1>
+    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/sending-manchester-united-game-reminders-with-python-raspberry-pi-beautiful-soup-and-twilio.html"> Sending Manchester United Game Reminders with Python, Raspberry Pi, Beautiful Soup, and Twilio  </a></h1>
     </header>
 </div>
 
@@ -78,18 +78,10 @@
         <div class="span8 offset2 article-content">
 
             
-            <h2>Understanding Bash Startup Files</h2>
-<p>In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc .bash_profile .profile and what I think the best setup is regarding these files. It is standard for these files to be srotred in the home directory ~ which is described by <a href="http://www.gnu.org/software/bash/manual/bashref.html#Tilde-Expansion">Tilde Expansion</a>. </p>
-<p>It is helpful to think about how Bash chronologically behaves when it is invoked as a interactive login session. When Bash is invoked as an interactive login shell, it first reads from the file /etc/profile if that file exists. After reading that file, it will look for a file at ~/.bash_profile, ~/.bash_login, and ~/.profile in that order. It will execute commands from the first one that is available if it exists, and will not proceed unless explicitly told so. </p>
-<p>If Bash is invoked as an interactive non-login session, then Bash reads and executes commands from ~/.bashrc, if that file exists. Therefore it is common to include the following commands in ~/.bash_profile, as it is often desired to ensure that ~/.bashrc is executed regardless of whether Bash is executed in a login or non-login session.  </p>
-<p>:::bash
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
-fi</p>
-<p>So here in ~/.bashrc you can put all various starting configurations like your PATH and you can source a file containing aliases like ~/.aliases every time you have a terminal session, whether it is a login session or simply another window. </p>
-<p>Just to specify, for remote shell logins, like an ssh login, Bash will read /etc/profile and then one of ~/.bash_profile or ~/.profile. </p>
-<p>For more reading, you can visit the bash manual and user guide <a href="http://www.gnu.org/software/bash/manual/bashref.html#Introduction">here</a> or another helpful guide <a href="http://mywiki.wooledge.org/DotFiles">here</a></p>
-<p>I think my setup will most likely include a sourcing of aliases from ~/.aliases within my ~/.bashrc file which is sourced for every terminal session, either login or non-login sessions. This seems to be a good setup for keeping things tidy and organized. I am open to suggestions and advice if anyone reads this post!</p>
+            <p>Somewhat surprisingly, I find that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of classes. However, now that I have this free time, I have started to follow sports more, specifically the English Premier League and NCAA Football. </p>
+<p>My favorite team in the English Premier League is Manchester United, however I didn't want to have to periodically check online when they play next. So I built a simple web
+scraping service with python to parse Manchester United's upcoming schedule and text it to my iphone every couple of days. </p>
+<p><a href="https://github.com/claytonblythe/RedDevilNotify">Github Repo</a></p>
 <p>Until next time,</p>
 <h4>Clayton Blythe | <em>Deep Python</em></h4>
             
@@ -99,15 +91,21 @@ fi</p>
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2017-08-18T22:34:00-05:00">Aug 18, 2017</time>
+            <time pubdate="pubdate" datetime="2017-09-09T13:10:00-05:00">Sep 9, 2017</time>
             <h4>Category</h4>
             <a class="category-link" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/categories.html#other-ref">Other</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#bash-ref">bash
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#python-ref">python
+                    <span>7</span>
+</a></li>
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#raspberry-pi-ref">raspberry pi
                     <span>1</span>
 </a></li>
-                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#version-control-ref">version control
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#soccer-ref">soccer
+                    <span>1</span>
+</a></li>
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#web-scraping-ref">web scraping
                     <span>1</span>
 </a></li>
             </ul>

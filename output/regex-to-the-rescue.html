@@ -10,18 +10,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="python, archer, neural style, Deep Learning, " />
+<meta name="keywords" content="cobol, regex, python, Regex, " />
 
-<meta property="og:title" content="Deep Archer: Neural Style Transfer for a Hip Profile Picture "/>
-<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/deep-archer-neural-style-transfer-for-a-hip-profile-picture.html" />
-<meta property="og:description" content="This is a post about using an interesting technique that is coming out of deep learning, called style transfer, to make a profile picture for myself using the Archer cartoon animation style, to change the look of my profile picture for my company&#39;s internal slack channel. Neural Networks are getting …" />
+<meta property="og:title" content="Regex to the Rescue "/>
+<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/regex-to-the-rescue.html" />
+<meta property="og:description" content="For a project at work, I had to parse archaic mainframe flat files produced with Job Control Language (JCL) and COBOL, popular programming languages from decades ago. The difficulty is that for a given record or observation, there was no set way of distinguishing different fields, with no delimiters present …" />
 <meta property="og:site_name" content="deepython.com" />
 <meta property="og:article:author" content="Clayton Blythe" />
-<meta property="og:article:published_time" content="2017-08-17T19:56:00-05:00" />
-<meta name="twitter:title" content="Deep Archer: Neural Style Transfer for a Hip Profile Picture ">
-<meta name="twitter:description" content="This is a post about using an interesting technique that is coming out of deep learning, called style transfer, to make a profile picture for myself using the Archer cartoon animation style, to change the look of my profile picture for my company&#39;s internal slack channel. Neural Networks are getting …">
+<meta property="og:article:published_time" content="2017-09-08T15:10:00-05:00" />
+<meta name="twitter:title" content="Regex to the Rescue ">
+<meta name="twitter:description" content="For a project at work, I had to parse archaic mainframe flat files produced with Job Control Language (JCL) and COBOL, popular programming languages from decades ago. The difficulty is that for a given record or observation, there was no set way of distinguishing different fields, with no delimiters present …">
 
-        <title>Deep Archer: Neural Style Transfer for a Hip Profile Picture  · deepython.com
+        <title>Regex to the Rescue  · deepython.com
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -70,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/deep-archer-neural-style-transfer-for-a-hip-profile-picture.html"> Deep Archer: Neural Style Transfer for a Hip Profile Picture  </a></h1>
+    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/regex-to-the-rescue.html"> Regex to the Rescue  </a></h1>
     </header>
 </div>
 
@@ -78,19 +78,13 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>This is a post about using an interesting technique that is coming out of deep learning, called style transfer,
-to make a profile picture for myself using the <em>Archer</em> cartoon animation style, to change the look of my profile picture for my company's internal slack channel.</p>
-<p>Neural Networks are getting pretty advanced, so much so that they can transfer the style of <a href="https://github.com/lengstrom/fast-style-transfer">one image onto another.</a> Naturally, I this would be a fun project for me to explore the area of deep learning in Python. Let's go!!</p>
-<p>This post will be discussion the most recent papers that have come out in the past couple years, called <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf">Image Style Transfer Using Convolutional Neural Networks
-</a> and <a href="https://arxiv.org/pdf/1609.04802">Perceptual Losses for Real-Time Style Transfer and Super-Resolution
-</a></p>
-<p>How about that for some light reading..heh</p>
-<p>So here are the following topics that are the main concepts allowing this type of deep neural network style transfer, and they will allow us to make new art!</p>
-<h2>Key concepts for this post:</h2>
-<h4>1. Artificial Neural Networks</h4>
-<h4>2. Convolutional Recurrent Neural Networks (CNNs)</h4>
-<h4>3. Deep Learning</h4>
-<hr>
+            <p>For a project at work, I had to parse archaic mainframe flat files produced with Job Control Language (JCL) and COBOL, popular programming languages from decades ago. The difficulty is that for a given record or observation, there was no set way of distinguishing different fields, with no delimiters present. The bytes were squished up next to each other, with a specific record structure determined by various COBOL Copy Books is what they are called. </p>
+<p>So the task was to generate a relational data structure out of these variable length records, and within each record there are various segments, each with different fields of different lengths in bytes. As you can see, this quickly got complicated. </p>
+<p>However we can bring regular expressions to the rescue!</p>
+<p><img alt="Alt Test" src="https://imgs.xkcd.com/comics/regular_expressions.png"> 
+(Source: https://imgs.xkcd.com/comics/regular_expressions.png)</p>
+<p>So I ended up looking for strings of text that start with a certain length of bytes for a key, followed by one of various segment indicators. Then I can use simple string splicing in Python with the shema specified by each segment's COBOL Copy Book to get the individual fields. </p>
+<p><a href="http://github.com/claytonblythe/cobolRegex">Github Repo</a></p>
 <p>Until next time,</p>
 <h4>Clayton Blythe | <em>Deep Python</em></h4>
             
@@ -100,19 +94,19 @@ to make a profile picture for myself using the <em>Archer</em> cartoon animation
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2017-08-17T19:56:00-05:00">Aug 17, 2017</time>
+            <time pubdate="pubdate" datetime="2017-09-08T15:10:00-05:00">Sep 8, 2017</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/categories.html#deep-learning-ref">Deep Learning</a>
+            <a class="category-link" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/categories.html#regex-ref">Regex</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#archer-ref">archer
-                    <span>1</span>
-</a></li>
-                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#neural-style-ref">neural style
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#cobol-ref">cobol
                     <span>1</span>
 </a></li>
                 <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#python-ref">python
                     <span>7</span>
+</a></li>
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#regex-ref">regex
+                    <span>1</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
