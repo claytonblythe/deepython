@@ -10,18 +10,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content=", Misc, " />
+<meta name="keywords" content="raspberry pi, python, web scraping, soccer, Other, " />
 
-<meta property="og:title" content="Blogging with Vim and Pelican "/>
-<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/blogging-with-vim-and-pelican.html" />
-<meta property="og:description" content="I have started to learn vim, and it has been a little painful to be honest. However, I have found it to be pretty liberating in that I barely need to use a mouse to do work on my laptop, especially for things like manipulating files, writing code, and even …" />
+<meta property="og:title" content="Manchester United Game Reminders with Python and Raspberry Pi "/>
+<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/manchester-united-game-reminders-with-python-and-raspberry-pi.html" />
+<meta property="og:description" content="Suprisingly, I have found that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of taking seventeen credits a semester. However, now that I …" />
 <meta property="og:site_name" content="deepython.com" />
 <meta property="og:article:author" content="Clayton Blythe" />
 <meta property="og:article:published_time" content="2017-09-09T13:10:00-05:00" />
-<meta name="twitter:title" content="Blogging with Vim and Pelican ">
-<meta name="twitter:description" content="I have started to learn vim, and it has been a little painful to be honest. However, I have found it to be pretty liberating in that I barely need to use a mouse to do work on my laptop, especially for things like manipulating files, writing code, and even …">
+<meta name="twitter:title" content="Manchester United Game Reminders with Python and Raspberry Pi ">
+<meta name="twitter:description" content="Suprisingly, I have found that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of taking seventeen credits a semester. However, now that I …">
 
-        <title>Blogging with Vim and Pelican  · deepython.com
+        <title>Manchester United Game Reminders with Python and Raspberry Pi  · deepython.com
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -70,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/blogging-with-vim-and-pelican.html"> Blogging with Vim and Pelican  </a></h1>
+    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/manchester-united-game-reminders-with-python-and-raspberry-pi.html"> Manchester United Game Reminders with Python and Raspberry Pi  </a></h1>
     </header>
 </div>
 
@@ -78,30 +78,15 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>I have started to learn vim, and it has been a little painful to be honest. However, I have found it to be pretty liberating in that I barely need to use a mouse to do work on my laptop, especially for things like manipulating files, writing code, and even editing/building my blog. </p>
-<p>I am slowly learning the tricks to quickly and efficiently navigate file structures, make changes to files, and even run normal bash commands as well. It was quit intimidating at first, but I am already finding it rewarding. Now, I have even written some custom commands and scripts to integrate my blog editing and deployment process that uses Pelican, a python utility for building sites and converting markdown text files to HTML. </p>
-<p>I think that it is important to be able to work as quickly and efficiently as possible, and not be hampered by menial things like taking time to open files, make changes, save them, and then see how the changes impact what you are trying to build or accomplish. The goal here is to make sure that my fingers and ability to navigate file structures aren't the limiting factors for my productivity, but rather the speed at which I can think and come up with solutions or content. </p>
-<p>For my blog, my workflow is as follows: I type "serve" in the command line which is a bash alias for changing to the directory of my blog, running a python/pelican development server which serves a local host replica of my blog. The blog is automatically opened in google chrome at http://localhost.com:8000 for me to browse and critique, as this 8000 port is the default for pelican. In an iterm2 terminal, I launch vim with the command "v", hit the leader key "," and shortly after "f" to open a small file browser plugin, which shows at the bottom most recently used files. There I can quickly move to different posts I had been working
-on and use standard vim commands. In normal mode I type the leader key ',' and then shortly after I type 'z'. This allows me to perform edits in "focus mode", a minimalistic mode for the vim text editor that I find quite useful and aesthetically pleasing. This focus mode functionality comes from a vim plugin that comes with a vimrc repository that I will link at the bottom.</p>
-<p>One important customization I added to vim was to make the Caps Lock serve as an escape key, so I can easily revert back to normal mode without having to reach for the escape key, which can take a lot of time if you make hundreds of small edits.</p>
-<p>So I begin making changes, and then I write the buffer of the file onto disk with the ":w" vim command, which is connected to an autocmd hook in vim within ~/vim_runtime/my_configs.vim. This configuration calls the google chrome command line utility chrome-cli. Chrome-cli waits a little under a second for Pelican to build the static html pages, and then refreshes any tabs I have open that contain the title
-of my blog,"deepython.com", in the description of the tab. </p>
-<p>Here is the specific autocmd added to ~/.vim_runtime/my_configs.vim file: </p>
-<p>autocmd BufWritePost *.md :!sleep .69 &amp;&amp; /Users/claytonblythe/github/version_control/scripts/reloadDeepython.sh</p>
-<p>The script reloadDeepython.sh contains the following: </p>
-<p>chrome-cli list tabs | grep deepython.com | cut -c 2-4 | while read -r line; do chrome-cli reload -t "$line"; done</p>
-<p>This assumes you have chrome-cli installed, which can be installed with "pip install chrome-cli"</p>
-<p>Using this configuration, I can get almost instant feed back about the aesthetics and content of my posts without even having to exit vim! </p>
-<p>It has been a pretty valuable way for me to learn about vim, python, and bash scripting, not to mention it is saving me a lot of time as well. </p>
-<p>Here is a photo of what my development environment looks like. Pretty slick huh? </p>
-<p><img alt="Alt Test" src="http://deepython.com.s3-website.us-east-2.amazonaws.com/images/blogSetup.png"> </p>
-<p>Here are some other links used in this post: </p>
-<ul>
-<li><a href="https://github.com/amix/vimrc">vimrc</a> github repo</li>
-<li><a href="http://github.com/claytonblythe/version_control/blob/master/scripts/reloadDeepython.sh">chrome-cli</a> script</li>
-<li><a href="https://github.com/prasmussen/chrome-cli">chrome-cli</a> github repo</li>
-</ul>
-<p>I hope that you find this useful. </p>
+            <p>Suprisingly, I have found that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of taking seventeen credits a semester. However, now that I have this all this free time, I have started to follow sports more, specifically the English Premier League and NCAA Football. </p>
+<p>My favorite team in the English Premier League is Manchester United, however I couldn't be bothered to periodically check online, find their schedule, and determine when they play next. Additionally, I thought this would be a good opportunity for me to learn more about web scraping and python. So I built a simple web
+scraping script to periodically parse Manchester United's upcoming schedule and text it to my iphone every couple of days. </p>
+<p>I have a python script called redDevilNotify.py running every two days on my Raspberry Pi which uses a Raspian Linux Distribution as the operating system. The Raspberry Pi is running 24/7 in my apartment, but it is very efficient and doesn't use much energy. 
+The script uses the beautifulsoup python library to scrape the html of Manchester United's website for upcoming games, parses the html, converts the UTC dates to EST, and then it uses the Twilio API to text a reminder SMS to my iphone. </p>
+<p>The following crontab scheduling command is used to run the script, and you can edit this with the bash command bash:::crontab -e</p>
+<p>0 9 */2 * * /usr/bin/python3 /path/to/redDevilNotify.py </p>
+<p>This means that the script will run on the zeroth minute of the ninth hour every two days for every week and month of the year. </p>
+<p><a href="https://github.com/claytonblythe/RedDevilNotify">Github Repo</a></p>
 <p>Until next time,</p>
 <h4>Clayton Blythe | <em>Deep Python</em></h4>
             
@@ -113,7 +98,22 @@ of my blog,"deepython.com", in the description of the tab. </p>
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2017-09-09T13:10:00-05:00">Sep 9, 2017</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/categories.html#misc-ref">Misc</a>
+            <a class="category-link" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/categories.html#other-ref">Other</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#python-ref">python
+                    <span>7</span>
+</a></li>
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#raspberry-pi-ref">raspberry pi
+                    <span>1</span>
+</a></li>
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#soccer-ref">soccer
+                    <span>1</span>
+</a></li>
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#web-scraping-ref">web scraping
+                    <span>1</span>
+</a></li>
+            </ul>
 <h4>Contact</h4>
     <a href="http://linkedin.com/in/claytonblythe" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-linkedin sidebar-social-links"></i></a>
