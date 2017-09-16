@@ -13,7 +13,7 @@
 <meta name="keywords" content="cs231n, notes, python, neural networks, CS231n, " />
 
 <meta property="og:title" content="CS231n Lecture 3 Notes "/>
-<meta property="og:url" content="http://localhost:8000/cs231n-lecture-3-notes.html" />
+<meta property="og:url" content="http://deepython.com.s3-website.us-east-2.amazonaws.com/cs231n-lecture-3-notes.html" />
 <meta property="og:description" content="I have recently been making my way through the Stanford Computer Science 231n course. This particular lecture was about defining a loss function for how the Linear Classifier performs across all of the training data, and this in a sense quantifies how &#34;unhappy&#34; our scores are across the training data …" />
 <meta property="og:site_name" content="deepython.com" />
 <meta property="og:article:author" content="Clayton Blythe" />
@@ -25,20 +25,20 @@
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://localhost:8000/theme/css/custom.css" media="screen">
-        <link rel="shortcut icon" href="http://localhost:8000/theme/images/favicon.ico" type="image/x-icon" type="image/png" />
-        <link rel="icon" href="http://localhost:8000/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" href="http://localhost:8000/theme/images/apple-touch-icon.png"  type="image/png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="http://localhost:8000/theme/images/apple-touch-icon-57x57.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="http://localhost:8000/theme/images/apple-touch-icon-72x72.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="http://localhost:8000/theme/images/apple-touch-icon-76x76.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="http://localhost:8000/theme/images/apple-touch-icon-114x114.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="http://localhost:8000/theme/images/apple-touch-icon-120x120.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="http://localhost:8000/theme/images/apple-touch-icon-144x144.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="http://localhost:8000/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="stylesheet" type="text/css" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/css/custom.css" media="screen">
+        <link rel="shortcut icon" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/favicon.ico" type="image/x-icon" type="image/png" />
+        <link rel="icon" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/theme/images/apple-touch-icon-152x152.png" type="image/png" />
     </head>
     <body>
         <div id="content-sans-footer">
@@ -50,14 +50,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="http://localhost:8000/"><span class=site-name><img src="/theme/images/android-chrome-512x512.png" width="33" height="33">  <span style="color:#254601; font-size:17pt">  deepython.com </span> </span></a>
+                    <a class="brand" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/"><span class=site-name><img src="/theme/images/android-chrome-512x512.png" width="33" height="33">  <span style="color:#254601; font-size:17pt">  deepython.com </span> </span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="http://localhost:8000">Home</a></li>
-                            <li ><a href="http://localhost:8000/categories.html">Categories</a></li>
-                            <li ><a href="http://localhost:8000/tags.html">Tags</a></li>
-                            <li ><a href="http://localhost:8000/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="http://localhost:8000/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com">Home</a></li>
+                            <li ><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/categories.html">Categories</a></li>
+                            <li ><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html">Tags</a></li>
+                            <li ><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://deepython.com.s3-website.us-east-2.amazonaws.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://localhost:8000/cs231n-lecture-3-notes.html"> CS231n Lecture 3 Notes  </a></h1>
+    <h1><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/cs231n-lecture-3-notes.html"> CS231n Lecture 3 Notes  </a></h1>
     </header>
 </div>
 
@@ -129,19 +129,19 @@ extraction without explicitly programming the structure of different features or
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2017-08-29T13:10:00-05:00">Aug 29, 2017</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://localhost:8000/categories.html#cs231n-ref">CS231n</a>
+            <a class="category-link" href="http://deepython.com.s3-website.us-east-2.amazonaws.com/categories.html#cs231n-ref">CS231n</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://localhost:8000/tags.html#cs231n-ref">cs231n
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#cs231n-ref">cs231n
                     <span>3</span>
 </a></li>
-                <li><a href="http://localhost:8000/tags.html#neural-networks-ref">neural networks
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#neural-networks-ref">neural networks
                     <span>4</span>
 </a></li>
-                <li><a href="http://localhost:8000/tags.html#notes-ref">notes
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#notes-ref">notes
                     <span>3</span>
 </a></li>
-                <li><a href="http://localhost:8000/tags.html#python-ref">python
+                <li><a href="http://deepython.com.s3-website.us-east-2.amazonaws.com/tags.html#python-ref">python
                     <span>8</span>
 </a></li>
             </ul>
