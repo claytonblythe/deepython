@@ -4,8 +4,9 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Clayton Blythe'
 SITENAME = u"""<img src="/theme/images/android-chrome-512x512.png" width="33" height="33">  <span style="color:#254601; font-size:17pt">  deepython.com </span> """
-SITEURL='http://deepython.com.s3-website.us-east-2.amazonaws.com/'
+#SITEURL='http://deepython.com.s3-website.us-east-2.amazonaws.com/'
 #SITEURL='http://localhost:8000'
+SITEURL='http://68.40.128.255'
 PATH = 'content'
 
 # Elegant theme
