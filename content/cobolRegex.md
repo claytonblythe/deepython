@@ -1,6 +1,6 @@
 Title: Regex to the Rescue
 Date: 2017-9-8 15:10
-Category: Regex 
+Category: Other
 tags: cobol, regex, python
 
 For a project at work, I had to parse archaic mainframe flat files produced with Job Control Language (JCL) and COBOL, popular programming languages from decades ago. The difficulty is that for a given record or observation, there was no set way of distinguishing different fields, with no delimiters present. The bytes were squished up next to each other, with a specific record structure determined by various COBOL Copy Books is what they are called. 

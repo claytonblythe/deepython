@@ -1,6 +1,6 @@
 Title: Network-wide Advertisement Blocking 
 Date: 2017-9-16 13:10
-Category: raspberry pi, linux 
+Category: Other
 
 Recently, I setup my own home wifi network with Comcast *shudder*. However, it initially hasn't been that bad despite their lackluster reputation. I consistently get 75+ Mbps for my plan that costs $35.00 per month, a decent deal for a basic necessity of mine, wireless internet. 
 

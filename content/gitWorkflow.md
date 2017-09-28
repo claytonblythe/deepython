@@ -1,6 +1,6 @@
 Title: My Git Workflow
 Date: 2017-9-2 13:10
-Category: Git 
+Category: Other
 tags: git, version control, bash
 
 ## Working Efficiently (a.k.a. Lazily)

@@ -1,6 +1,7 @@
 Title: Blogging with Vim and Pelican
 Date: 2017-9-9 13:10
-Category: Misc 
+Category: Other
+tags: vim
 
 I have started to learn vim, and it has been a little painful to be honest. However, I have found it to be pretty liberating in that I barely need to use a mouse to do work on my laptop, especially for things like manipulating files, writing code, and even editing/building my blog. 
 

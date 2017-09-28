@@ -1,6 +1,6 @@
 Title: CS231n Lecture 4 Notes
 Date: 2017-9-3 13:10
-Category: CS231n 
+Category: Deep Learning
 tags: cs231n, python, notes, neural networks
 
 The purpose of this lecture was to introduce the imporatance and basic functioning of an fundamental concept in neural networks, backprogation. In short, backpropagation is a method for computing the gradient of a loss function with respect to the weights and biases of a neural network. This is done through recursive application of the chain rule, that you might be familiar with from multivariable calculus. 

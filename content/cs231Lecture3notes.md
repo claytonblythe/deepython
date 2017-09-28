@@ -1,6 +1,6 @@
 Title: CS231n Lecture 3 Notes
 Date: 2017-8-29 13:10
-Category: CS231n
+Category: Deep Learning
 tags: cs231n, notes, python, neural networks
 
 
