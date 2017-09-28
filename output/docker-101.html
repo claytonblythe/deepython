@@ -14,12 +14,12 @@
 
 <meta property="og:title" content="Docker 101 "/>
 <meta property="og:url" content="http://deepython.com/docker-101.html" />
-<meta property="og:description" content="This is a post about what docker is and how you can use it to be more efficient in your work. With machine learning and deep learning, it can be difficult to keep all the dependencies straight, like specific versions of linux, python, package versions etc. Over the past few …" />
+<meta property="og:description" content="This is a post about what Docker is, and how you can use it to be more efficient in your work, especially if it involves deploying to production or sharing with others. With machine learning and deep learning, it can be difficult to keep all the dependencies straight, especially with …" />
 <meta property="og:site_name" content="deepython.com" />
 <meta property="og:article:author" content="Clayton Blythe" />
 <meta property="og:article:published_time" content="2017-08-18T22:34:00-05:00" />
 <meta name="twitter:title" content="Docker 101 ">
-<meta name="twitter:description" content="This is a post about what docker is and how you can use it to be more efficient in your work. With machine learning and deep learning, it can be difficult to keep all the dependencies straight, like specific versions of linux, python, package versions etc. Over the past few …">
+<meta name="twitter:description" content="This is a post about what Docker is, and how you can use it to be more efficient in your work, especially if it involves deploying to production or sharing with others. With machine learning and deep learning, it can be difficult to keep all the dependencies straight, especially with …">
 
         <title>Docker 101  · deepython.com
 </title>
@@ -78,13 +78,14 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>This is a post about what docker is and how you can use it to be more efficient in your work. With machine learning and deep learning, it can be difficult to keep all the dependencies straight, like specific versions of linux, python, package versions etc. </p>
-<p>Over the past few years, tools have become more popular for developing reproducible environments for doing reproducible research and also deployment (DevOps). With Docker, an <em>image</em> can be specified, which is essentially a blueprint for an isolated environment
- called a container. With Docker, it is possible to use these images to create <em>containers</em> which are launched and allow for you to know exactly what type of system, versions, and software it contains. </p>
-<p>Docker containers are a layer that allows for making Linux containers easier to use. It is also OS agnostic, so you can use it on Mac, Windows, and Linux. </p>
-<p>So say you want to share the PyTorch project that you worked on a few weeks ago, and others need the ability to reproduce your work, or maybe you need to launch it as some type of service. That can be quickly spun up and reliable. This is where Docker containers become very useful. </p>
-<p>One use that I frequently use Docker for is launching a Pytorch Jupyter Notebook server. Here I can quickly launch new experiments,make commits to git repositories when I make progress, and just remove the container at the end without being worried about reproducing some working environment. </p>
-<p>Another use that I find useful is for reproducing a personalized environment with your own bash aliases and profile, Github repositories and basic software. I have a Dockerfile that runs vanilla ubuntu with basic things like conda, python3.6, git, vim, pip, and pelican. Then it clones Github repositories for projects that I am working on and my dotfiles (.bashrc .bash_profile .aliases), vim configuration and basically reproduces my own environment almost instantly. This allows me to be comfortable working on any machine with Docker installed, as I can quickly reproduce my desired and personalized most up-to-date environment. </p>
+            <p>This is a post about what Docker is, and how you can use it to be more efficient in your work, especially if it involves deploying to production or sharing with others. With machine learning and deep learning, it can be difficult to keep all the dependencies straight, especially with diverging distributions and versions of linux, python, or various packages. </p>
+<p>Over the past few years, tools like virtual machines or virtual envrionments have become more popular for developing ephemeral environments for doing reproducible research and deployment (DevOps). With Docker, an <em>image</em> can be specified, which is essentially a blueprint for an isolated environment
+ called a container, which runs on top of <em>nearly</em> any operating system. With Docker, it is possible to use these images to create <em>containers</em> which are launched and allow for you to specify exactly what type of operating system, language iteration, and software it contains. </p>
+<p>Docker containers are useful as a layer that makes Linux containers easier to use. It is also OS agnostic, so you can use these images to make docker containers on various systems whether they are Mac, Windows, or Linux. </p>
+<p>So say you want to share a PyTorch project that you worked on a few weeks ago, and others need the ability to quickly reproduce your work, or maybe you need to launch it as some type of service. With Docker images and containers, they can be quickly spun up and more importantly they are reliable and just work. This is where Docker containers become very useful. </p>
+<p>One use that I frequently use Docker for is launching a Pytorch Jupyter Notebook server that can run on nearly any environment. Here I can quickly launch new experiments, make commits to git repositories when I make progress, and just remove the container at the end without being worried about reproducing some working environment for later use. </p>
+<p>Another use that I find useful is for reproducing a personalized environment with your own bash aliases and profile, Github repositories and basic software. I have a Dockerfile that runs vanilla ubuntu with basic things like conda, python3.6, git, vim, pip, and pelican. Then it clones Github repositories for projects that I am frequently working on, and my personalized dotfiles (.bashrc .bash_profile .aliases), vim configuration. So in a sense, my personal computer and working environment lives in a version controlled environment specified by a docker image "recipe".
+Should somthing go wrong with certain libraries or configurations, I can almost instsantly reproduce a base personalized working environment almost instantly. This allows me to be comfortable working on any machine with Docker installed, as I can quickly reproduce my desired and personalized most up-to-date environment. </p>
 <p>Examples of this can be found on my Github profile in the <a href="https://github.com/claytonblythe/Dockerfiles">dockerfiles repository</a></p>
 <p>Until next time,</p>
 <h4>Clayton Blythe | <em>Deep Python</em></h4>
