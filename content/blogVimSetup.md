@@ -32,7 +32,7 @@ It has been a pretty valuable way for me to learn about vim, python, and bash sc
 
 Here is a photo of what my development environment looks like. Pretty slick huh? 
 
-![Alt Test](https://deepython.com.s3-website.us-east-2.amazonaws.com/images/blogSetup.png) 
+![Alt Test](https://deepython.com/images/blogSetup.png) 
 
 
 Here are some other links used in this post: 
