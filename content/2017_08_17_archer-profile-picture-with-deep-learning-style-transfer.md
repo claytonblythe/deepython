@@ -2,7 +2,7 @@ Title: Deep Archer: Neural Style Transfer for a Hip Profile Picture
 Date: 2017-8-17 19:56
 Category: Deep Learning
 tags: python, archer, neural style
-status: draft
+Status: draft
 
 This is a post about using an interesting technique that is coming out of deep learning, called style transfer. The aim is to take the nebulous "artistic style" of an image, determine some mathematical representation of this style, and then do an inverse trasnformation to some image to incorporate that style. For my own project, I want to make a profile picture of myself that looks similar to the *Archer* cartoon animation style, to change the look of my profile picture for my company's internal slack channel and my github profile picture.
 
