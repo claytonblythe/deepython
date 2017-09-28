@@ -13,7 +13,7 @@
 <meta name="keywords" content="bash, version control, Bash, " />
 
 <meta property="og:title" content="Personalized Bash Environment "/>
-<meta property="og:url" content="http://deepython.com/personalized-bash-environment.html" />
+<meta property="og:url" content="/personalized-bash-environment.html" />
 <meta property="og:description" content="Understanding Bash Startup Files In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc .bash_profile .profile …" />
 <meta property="og:site_name" content="deepython.com" />
 <meta property="og:article:author" content="Clayton Blythe" />
@@ -25,20 +25,20 @@
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="http://deepython.com/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://deepython.com/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://deepython.com/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://deepython.com/theme/css/custom.css" media="screen">
-        <link rel="shortcut icon" href="http://deepython.com/theme/images/favicon.ico" type="image/x-icon" type="image/png" />
-        <link rel="icon" href="http://deepython.com/theme/images/apple-touch-icon-152x152.png" type="image/png" />
-        <link rel="apple-touch-icon" href="http://deepython.com/theme/images/apple-touch-icon.png"  type="image/png" />
-        <link rel="apple-touch-icon" sizes="57x57" href="http://deepython.com/theme/images/apple-touch-icon-57x57.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="http://deepython.com/theme/images/apple-touch-icon-72x72.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="http://deepython.com/theme/images/apple-touch-icon-76x76.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="http://deepython.com/theme/images/apple-touch-icon-114x114.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="http://deepython.com/theme/images/apple-touch-icon-120x120.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="144x144" href="http://deepython.com/theme/images/apple-touch-icon-144x144.png" type="image/png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="http://deepython.com/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="stylesheet" type="text/css" href="/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" type="image/png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png"  type="image/png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/theme/images/apple-touch-icon-76x76.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/theme/images/apple-touch-icon-120x120.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/theme/images/apple-touch-icon-152x152.png" type="image/png" />
     </head>
     <body>
         <div id="content-sans-footer">
@@ -50,14 +50,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="http://deepython.com/"><span class=site-name><img src="/theme/images/android-chrome-512x512.png" width="33" height="33">  <span style="color:#254601; font-size:17pt">  deepython.com </span> </span></a>
+                    <a class="brand" href="/"><span class=site-name><img src="/theme/images/android-chrome-512x512.png" width="33" height="33">  <span style="color:#254601; font-size:17pt">  deepython.com </span> </span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="http://deepython.com">Home</a></li>
-                            <li ><a href="http://deepython.com/categories.html">Categories</a></li>
-                            <li ><a href="http://deepython.com/tags.html">Tags</a></li>
-                            <li ><a href="http://deepython.com/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="http://deepython.com/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://deepython.com/personalized-bash-environment.html"> Personalized Bash Environment  </a></h1>
+    <h1><a href="/personalized-bash-environment.html"> Personalized Bash Environment  </a></h1>
     </header>
 </div>
 
@@ -79,7 +79,7 @@
 
             
             <h2>Understanding Bash Startup Files</h2>
-<p>In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc .bash_profile .profile and what I think the best setup is regarding these files. It is standard for these files to be srotred in the home directory ~ which is described by <a href="http://www.gnu.org/software/bash/manual/bashref.html#Tilde-Expansion">Tilde Expansion</a>. </p>
+<p>In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc .bash_profile .profile and what I think the best setup is regarding these files. It is standard for these files to be srotred in the home directory ~ which is described by <a href="https://www.gnu.org/software/bash/manual/bashref.html#Tilde-Expansion">Tilde Expansion</a>. </p>
 <p>It is helpful to think about how Bash chronologically behaves when it is invoked as a interactive login session. When Bash is invoked as an interactive login shell, it first reads from the file /etc/profile if that file exists. After reading that file, it will look for a file at ~/.bash_profile, ~/.bash_login, and ~/.profile in that order. It will execute commands from the first one that is available if it exists, and will not proceed unless explicitly told so. </p>
 <p>If Bash is invoked as an interactive non-login session, then Bash reads and executes commands from ~/.bashrc, if that file exists. Therefore it is common to include the following commands in ~/.bash_profile, as it is often desired to ensure that ~/.bashrc is executed regardless of whether Bash is executed in a login or non-login session.  </p>
 <p>:::bash
@@ -88,7 +88,7 @@ if [ -f ~/.bashrc ]; then
 fi</p>
 <p>So here in ~/.bashrc you can put all various starting configurations like your PATH and you can source a file containing aliases like ~/.aliases every time you have a terminal session, whether it is a login session or simply another window. </p>
 <p>Just to specify, for remote shell logins, like an ssh login, Bash will read /etc/profile and then one of ~/.bash_profile or ~/.profile. </p>
-<p>For more reading, you can visit the bash manual and user guide <a href="http://www.gnu.org/software/bash/manual/bashref.html#Introduction">here</a> or another helpful guide <a href="http://mywiki.wooledge.org/DotFiles">here</a></p>
+<p>For more reading, you can visit the bash manual and user guide <a href="https://www.gnu.org/software/bash/manual/bashref.html#Introduction">here</a> or another helpful guide <a href="https://mywiki.wooledge.org/DotFiles">here</a></p>
 <p>I think my setup will most likely include a sourcing of aliases from ~/.aliases within my ~/.bashrc file which is sourced for every terminal session, either login or non-login sessions. This seems to be a good setup for keeping things tidy and organized. I am open to suggestions and advice if anyone reads this post!</p>
 <p>Until next time,</p>
 <h4>Clayton Blythe | <em>Deep Python</em></h4>
@@ -101,20 +101,20 @@ fi</p>
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2017-08-18T22:34:00-05:00">Aug 18, 2017</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://deepython.com/categories.html#bash-ref">Bash</a>
+            <a class="category-link" href="/categories.html#bash-ref">Bash</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://deepython.com/tags.html#bash-ref">bash
+                <li><a href="/tags.html#bash-ref">bash
                     <span>2</span>
 </a></li>
-                <li><a href="http://deepython.com/tags.html#version-control-ref">version control
+                <li><a href="/tags.html#version-control-ref">version control
                     <span>3</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
-    <a href="http://linkedin.com/in/claytonblythe" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
+    <a href="https://linkedin.com/in/claytonblythe" title="My LinkedIn Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-linkedin sidebar-social-links"></i></a>
-    <a href="http://github.com/claytonblythe" title="My Github Profile" class="sidebar-social-links" target="_blank">
+    <a href="https://github.com/claytonblythe" title="My Github Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-github sidebar-social-links"></i></a>
         </div>
         </section>
@@ -129,7 +129,7 @@ fi</p>
 <footer>
 <div id="footer">
     <ul class="footer-content">
-        <li class="elegant-license"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">deepython.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://deepython.com" property="cc:attributionName" rel="cc:attributionURL">Clayton Blythe</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</li>
+        <li class="elegant-license"><span xmlns:dct="https://purl.org/dc/terms/" property="dct:title">deepython.com</span> by <a xmlns:cc="https://creativecommons.org/ns#" href="https://deepython.com" property="cc:attributionName" rel="cc:attributionURL">Clayton Blythe</a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</li>
         <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
     </ul>
 </div>
