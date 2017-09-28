@@ -7,7 +7,7 @@ SITENAME = u"""<img src="/theme/images/android-chrome-512x512.png" width="33" he
 #SITEURL='https://deepython.com.s3-website.us-east-2.amazonaws.com/'
 #SITEURL='http://localhost:8000'
 #SITEURL='https://68.40.128.255'
-#SITEURL='http://deepython.com'
+SITEURL='http://deepython.com'
 PATH = 'content'
 
 # Elegant theme
