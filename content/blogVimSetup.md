@@ -32,13 +32,13 @@ It has been a pretty valuable way for me to learn about vim, python, and bash sc
 
 Here is a photo of what my development environment looks like. Pretty slick huh? 
 
-![Alt Test](http://deepython.com.s3-website.us-east-2.amazonaws.com/images/blogSetup.png) 
+![Alt Test](https://deepython.com.s3-website.us-east-2.amazonaws.com/images/blogSetup.png) 
 
 
 Here are some other links used in this post: 
 
 * [vimrc](https://github.com/amix/vimrc) github repo
-* [chrome-cli](http://github.com/claytonblythe/version_control/blob/master/scripts/reloadDeepython.sh) script
+* [chrome-cli](https://github.com/claytonblythe/version_control/blob/master/scripts/reloadDeepython.sh) script
 * [chrome-cli](https://github.com/prasmussen/chrome-cli) github repo
 
 I hope that you find this useful. 

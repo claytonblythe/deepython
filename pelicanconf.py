@@ -4,10 +4,10 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Clayton Blythe'
 SITENAME = u"""<img src="/theme/images/android-chrome-512x512.png" width="33" height="33">  <span style="color:#254601; font-size:17pt">  deepython.com </span> """
-#SITEURL='http://deepython.com.s3-website.us-east-2.amazonaws.com/'
-#SITEURL='http://localhost:8000'
-#SITEURL='http://68.40.128.255'
-SITEURL='http://deepython.com'
+#SITEURL='https://deepython.com.s3-website.us-east-2.amazonaws.com/'
+#SITEURL='https://localhost:8000'
+#SITEURL='https://68.40.128.255'
+SITEURL='https://deepython.com'
 PATH = 'content'
 
 # Elegant theme
@@ -34,12 +34,12 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),)
+LINKS = (('Pelican', 'https://getpelican.com/'),
+         ('Python.org', 'https://python.org/'),)
 
 # Social widget
-SOCIAL = (('LinkedIn', 'http://linkedin.com/in/claytonblythe'),
-          ('Github', 'http://github.com/claytonblythe'),)
+SOCIAL = (('LinkedIn', 'https://linkedin.com/in/claytonblythe'),
+          ('Github', 'https://github.com/claytonblythe'),)
 
 PLUGIN_PATHS=['/Users/claytonblythe/github/pelican-plugins']
 PLGINS=['tipque_search', 'sitemap']
@@ -63,17 +63,17 @@ SITEMAP = {
 THEME='/users/claytonblythe/github/elegantdp'
 
 LANDING_PAGE_ABOUT = {'title': 'Python and Deep Learning',
-        'details': """<div itemscope itemtype="http://schema.org/Person"><p>My name
-        is <span itemprop="name">Clayton Blythe</span>.<p>I am a 22 year old guy working for <a href="http://ford.com/"
+        'details': """<div itemscope itemtype="https://schema.org/Person"><p>My name
+        is <span itemprop="name">Clayton Blythe</span>.<p>I am a 22 year old guy working for <a href="https://ford.com/"
         title="Ford Motor Company" itemprop="affiliation">Ford Motor Company</a> as a Machine Learning / Artificial Intelligence Scientist. I play a broad role there, which
         includes research, product development, engineering and deployment for a variety of data intensive projects such as cybersecurity, customer interaction,
         and autonomous vehicle itiatives.
-        </p>You can take a look at my <a href="https://github.com/claytonblythe/" title="Github
+        </p>You can take a look at my <a href="httpss://github.com/claytonblythe/" title="Github
        profile" itemprop="url"><span itemprop="nickname">Github profile</span></a>, reach out to me
        at my personal email <a
        href="mailto:claytondblythe@gmail.com" title="personal email
        " itemprop="email">claytondblythe@gmail.com</a>, or message me on <a
-       href="http://linkedin.com/in/claytonblythe" title="LinkedIn
+       href="https://linkedin.com/in/claytonblythe" title="LinkedIn
        profile" itemprop="linkedin">LinkedIn.</a> You can also download my <a
        href="/images/august_resume.pdf" title="My resume" itemprop="resume">resume</a> if you want. </p>
        <p>I mostly work in Python within OSX and Linux, but I have also occasionally dabbled in  languages like R, and Scala. This blog will be primarily about using Python for deep learning, but I will likely delve into a wide variety of topics. It also will serve as a place for me to gather and organize my learning process as I begin working in this field. </p><p>Besides programming, I like to exercise, go to
@@ -83,7 +83,7 @@ LANDING_PAGE_ABOUT = {'title': 'Python and Deep Learning',
 
 
 # Legal
-SITE_LICENSE = u'<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">deepython.com</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://deepython.com" property="cc:attributionName" rel="cc:attributionURL">Clayton Blythe</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.'
+SITE_LICENSE = u'<span xmlns:dct="https://purl.org/dc/terms/" property="dct:title">deepython.com</span> by <a xmlns:cc="https://creativecommons.org/ns#" href="https://deepython.com" property="cc:attributionName" rel="cc:attributionURL">Clayton Blythe</a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.'
 
 
 # Landing Page

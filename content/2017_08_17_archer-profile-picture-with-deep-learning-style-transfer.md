@@ -9,7 +9,7 @@ This is a post about using an interesting technique that is coming out of deep l
 Neural Networks are getting pretty advanced, so much so that they can transfer the style of one image onto another [like shown in this github project.](https://github.com/lengstrom/fast-style-transfer) Naturally, I this would be a fun project for me to explore the area of neural networks and deep learning with Python. Let's go!!
 
 This post will be employing some of the methods described in recent papers that have come out, namely [Image Style Transfer Using Convolutional Neural Networks
-](http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) and [Perceptual Losses for Real-Time Style Transfer and Super-Resolution
+](https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Gatys_Image_Style_Transfer_CVPR_2016_paper.pdf) and [Perceptual Losses for Real-Time Style Transfer and Super-Resolution
 ](https://arxiv.org/pdf/1609.04802)
 
 How about that for some light reading..heh

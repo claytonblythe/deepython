@@ -14,7 +14,7 @@ However we can bring regular expressions to the rescue!
 
 So I ended up looking for strings of text that start with a certain length of bytes for a key, followed by one of various segment indicators. Then I can use simple string splicing in Python with the shema specified by each segment's COBOL Copy Book to get the individual fields. 
 
-[Github Repo](http://github.com/claytonblythe/cobolRegex)
+[Github Repo](https://github.com/claytonblythe/cobolRegex)
 
 Until next time,
 #### Clayton Blythe | *Deep Python*
