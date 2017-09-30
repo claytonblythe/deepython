@@ -2,7 +2,7 @@ Title: Network-wide Advertisement Blocking
 Date: 2017-9-16 13:10
 Category: Other
 
-Recently, I setup my own home wifi network with Comcast *shudder*. However, it initially hasn't been that bad despite their lackluster reputation. I consistently get 75+ Mbps for my plan that costs $35.00 per month, a decent deal for a basic necessity of mine, wireless internet. 
+Recently, I setup my own home wifi network with Comcast.. *shudder* However, it initially hasn't been that bad despite their lackluster reputation. I consistently get 75+ Mbps for my plan that costs $35.00 per month, a decent deal for a basic necessity of mine, wireless internet. 
 
 I am a person who has little patience for online advertising. Luckily, I saw this interesting project online about how you can use a rapsberry pi as a DNS server. A DNS server translates human-memorable domain names and hostnames into their corresponding IP addresses. The pi-hole doesn't sit in between your connected devices and the internet, but rather it is a DNS server that blacklists certain domain names, typically ones that host content. As a result, it doesn't allow any content to be retrieved if that hostname is contained within a
 certain database of domain names. So, the router goes to the DNS server and says "hey I'm looking for this domain name, what's the IP address?" 

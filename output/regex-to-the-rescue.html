@@ -10,7 +10,7 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="cobol, regex, python, Regex, " />
+<meta name="keywords" content="cobol, regex, python, Other, " />
 
 <meta property="og:title" content="Regex to the Rescue "/>
 <meta property="og:url" content="http://deepython.com/regex-to-the-rescue.html" />
@@ -81,8 +81,8 @@
             <p>For a project at work, I had to parse archaic mainframe flat files produced with Job Control Language (JCL) and COBOL, popular programming languages from decades ago. The difficulty is that for a given record or observation, there was no set way of distinguishing different fields, with no delimiters present. The bytes were squished up next to each other, with a specific record structure determined by various COBOL Copy Books is what they are called. </p>
 <p>So the task was to generate a relational data structure out of these variable length records, and within each record there are various segments, each with different fields of different lengths in bytes. As you can see, this quickly got complicated. </p>
 <p>However we can bring regular expressions to the rescue!</p>
-<p><img alt="Alt Test" src="https://imgs.xkcd.com/comics/regular_expressions.png"> 
-(Source: https://imgs.xkcd.com/comics/regular_expressions.png)</p>
+<p><img alt="Alt Test" src="https://imgs.xkcd.com/comics/regular_expressions.png"> </p>
+<p>(Source: https://imgs.xkcd.com/comics/regular_expressions.png)</p>
 <p>So I ended up looking for strings of text that start with a certain length of bytes for a key, followed by one of various segment indicators. Then I can use simple string splicing in Python with the shema specified by each segment's COBOL Copy Book to get the individual fields. </p>
 <p><a href="https://github.com/claytonblythe/cobolRegex">Github Repo</a></p>
 <p>Until next time,</p>
@@ -96,7 +96,7 @@
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2017-09-08T15:10:00-05:00">Sep 8, 2017</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://deepython.com/categories.html#regex-ref">Regex</a>
+            <a class="category-link" href="http://deepython.com/categories.html#other-ref">Other</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="http://deepython.com/tags.html#cobol-ref">cobol

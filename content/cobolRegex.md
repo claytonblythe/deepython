@@ -10,6 +10,7 @@ So the task was to generate a relational data structure out of these variable le
 However we can bring regular expressions to the rescue!
 
 ![Alt Test](https://imgs.xkcd.com/comics/regular_expressions.png) 
+
 (Source: https://imgs.xkcd.com/comics/regular_expressions.png)
 
 So I ended up looking for strings of text that start with a certain length of bytes for a key, followed by one of various segment indicators. Then I can use simple string splicing in Python with the shema specified by each segment's COBOL Copy Book to get the individual fields. 
