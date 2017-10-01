@@ -89,6 +89,11 @@ SITE_LICENSE = u'<span xmlns:dct="https://purl.org/dc/terms/" property="dct:titl
 # Landing Page
 PROJECTS = [
         {
+            'name': 'Neural Music',
+            'url':
+            'https://github.com/claytonblythe/neuralMusic',
+            'description': 'An attempt at six-second music genre classification with Neural Networks '},
+        {
             'name': 'Movie Colorify',
             'url':
             'https://github.com/claytonblythe/movie_colorify',
