@@ -14,17 +14,17 @@ The style distance is more obscure, using a Gram produce of vectorized feature m
 
 For example, we can do style transfer of "Starry Night" onto a selfie of myself. 
 
-![Alt Test](https://deepython.com/images/starrynight.png =512x512)
-![Alt Test](https://deepython.com/images/headshot.png =512x512)
-![Alt Test](https://deepython.com/images/starryn_cw0.6.png =512x512)
+![Alt Test](https://deepython.com/images/starrynight.png)
+![Alt Test](https://deepython.com/images/headshot.png)
+![Alt Test](https://deepython.com/images/starryn_cw0.6.png)
 
 I think that the results are pretty amazing to be honest, however it should be noted that I ran hundreds of different weight combinations for different images, and hand-picked the best results to post on here. I think it has produced some interesting pictures that I plan to use on for online profile pictures. 
 
 Here are a couple more results. The first was created using a green spider-web looking image, and the second with the famous "Scream" painting. 
 
-![Alt Test](https://deepython.com/images/trial_19642857_3.8.png =512x512)
+![Alt Test](https://deepython.com/images/trial_19642857_3.8.png)
 
-![Alt Test](https://deepython.com/images/trial_6957597_0.2.png =512x512)
+![Alt Test](https://deepython.com/images/trial_6957597_0.2.png)
 
 Overall, I had a blast working on this project. It was a great opportunity for me to experiment with neural networks and PyTorch. I'm looking forward to learning more! 
 
