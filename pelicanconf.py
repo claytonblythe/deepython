@@ -104,6 +104,11 @@ PROJECTS = [
             'https://github.com/claytonblythe/spectral_analysis',
             'description': 'Analyzing circularly polarized high harmonic generation in helium'},
         {
+            'name': 'Neural Selfie',
+            'url':
+            'https://github.com/claytonblythe/neuralSelfie',
+            'description': 'An attempt at artistic style transfer on a selfie with neural networks'},
+        {
             'name': 'Wifi Speed Tracking',
             'url':
             'https://github.com/claytonblythe/wifi_speed_tracking',
