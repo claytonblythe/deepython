@@ -14,9 +14,9 @@ The style distance is more obscure, using a Gram produce of vectorized feature m
 
 For example, we can do style transfer of "Starry Night" onto a selfie of myself. 
 
-![Alt Test]('http://deepython.com/images/starrynight.png')
-![Alt Test]('http://deepython.com/images/headshot.png')
-![Alt Test]('http://deepython/images/starryn_cw0.6.png')
+![Alt Test](https://deepython.com/images/starrynight.png)
+![Alt Test](https://deepython.com/images/headshot.png)
+![Alt Test](https://deepython/images/starryn_cw0.6.png)
 
 
 Until next time,
