@@ -22,7 +22,7 @@ I think that the results are pretty amazing to be honest, however it should be n
 
 Here are a couple more results. The first was created using a green spider-web looking image, and the second with the famous "Scream" painting. 
 
-[Alt Test](https://deepython.com/images/trial_19642857_3.8.png)
+![Alt Test](https://deepython.com/images/trial_19642857_3.8.png)
 
 ![Alt Test](https://deepython.com/images/trial_6957597_0.2.png)
 
