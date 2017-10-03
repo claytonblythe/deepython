@@ -1,4 +1,4 @@
-Title: Neural Style Transfer Selfie
+Title: Neural Selfie
 Date: 2017-10-02 13:10
 Category: Deep Learning
 
