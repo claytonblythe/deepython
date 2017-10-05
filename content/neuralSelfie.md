@@ -16,6 +16,8 @@ For example, we can do style transfer of "Starry Night" onto a selfie of myself.
 
 ![Alt Test](https://deepython.com/images/starrynight.png)
 ![Alt Test](https://deepython.com/images/headshot.png)
+
+And here is the result: 
 ![Alt Test](https://deepython.com/images/starryn_cw0.6.png)
 
 I think that the results are pretty amazing to be honest, however it should be noted that I ran hundreds of different weight combinations for different images, and hand-picked the best results to post on here. I think it has produced some interesting pictures that I plan to use on for online profile pictures. 
