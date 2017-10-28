@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>CS231n Lecture 5 Notes</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/deep-learning.html">Deep Learning</a></li>
+                    <li><a href="/category/docker.html">Docker</a></li>
+                    <li><a href="/category/misc.html">Misc</a></li>
+                    <li><a href="/category/other.html">Other</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/cs231n-lecture-5-notes.html" rel="bookmark"
+           title="Permalink to CS231n Lecture 5 Notes">CS231n Lecture 5 Notes</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-09-13T13:10:00+00:00">
+                Published: Wed 13 September 2017
+        </abbr>
+
+<p>In <a href="/category/deep-learning.html">Deep Learning</a>.</p>
+<p>tags: <a href="/tag/cs231n.html">cs231n</a> <a href="/tag/python.html">python</a> <a href="/tag/notes.html">notes</a> <a href="/tag/neural-networks.html">neural networks</a> </p>
+</footer><!-- /.post-info -->      <p>The purpose of this lecture was to introduce neural networks, and it extends beyond linear classification and describes how the "wiggle" (non-linearity) of neural networks are generated. The calculation of a score formula s=Wx is extended to add a clamping function like max(0, W1x) where an arbitrary number of weight matrices W1, W2 etc can be learned with stochastic gradient descent by calculating local gradients through backpropagation and the chain rule. </p>
+<p>These weight parameters and matrices are learned through the training process. The sizes of these intermediate hidden vectors are hyperparameters that can be determined through grid searching. The lecture then discusses the concept of a forward-propagating neuron, in which each neuron performs a dot product of the input and its weights, adds a bias, and applies the non-linearity (like the sigmoid activation function). </p>
+<p>A single neuron can also be thought of as a linear classifier, either a binary softmax classifier or a binary support vector machine classifier if a max-margin hinge loss is added to the output.</p>
+<h3>Activation Functions</h3>
+<h4><strong>Sigmoid</strong></h4>
+<p>The sigmoid function has two major drawbacks. One is that the neuron's activation function saturates at 0 and 1, leading to a cradient at these regions that is almost zero. Therefore almost no signal will flow through the neuron to its weights. Therefore you must be careful when initializing weights. The other undesirable aspect is that sigmoid outputs are not zero centered. Neurons in later layers of the neural network will be receiving data that is not zero centered, and gradient
+descent would be zig zagging. However, by using batches of data for updating the weights, this can be mitigated. </p>
+<h4><strong>Tanh</strong></h4>
+<p>The tanh is usually preferred to the sigmoid nonlinearity, where the output is zero centered</p>
+<h4><strong>ReLU</strong></h4>
+<p>The rectified linear unit computes the max(0,x) function and is thresholded at zero. The advantages are that it has been found to greatly accelerate stochastic gradient descent. The ReLU can be implemented by just thresholding a matrix of activations at zero. However, ReLU units can be fragile and die. If the learning rate is set too high, a large gradient flowing through a ReLU neuron can cause the weights to update in such a way that the neuron will never activate on a datapoint
+again. </p>
+<h4><strong>Leaky ReLU</strong></h4>
+<p>This is an attempt to fix the dying ReLU problem, with mixed success.</p>
+<p>Usually the ReLU is chosen, while monitoring the fraction of dead units in a network. </p>
+<h3>Neural Network Architecture</h3>
+<p>Neural networks can be modeled as collections of neurons that are connected in a acyclic graph, where the outputs of some neurons become the inputs of other neurons. No cycles are allowed, and the neurons are organized into layers, commonly fully connected ones. The output layer is often the number of categories for the desired prediction, two for binary classifcation or ten for the ten categories in the CIFAR-10 dataset for example. They also usually do not have an activation
+function, as the values are mean to be interpreted as scores for classification or some value for regression. The input layer is usually not counted, so logistic regression or support vector machines can be thought of as a single-layer neural network, where the inputs map directly to the outputs. Overall, these networks are interchangeably referred to as
+<em>Artificial Neural Networks</em> and <em>Multi-Layer Perceptrons</em>, and besides being inspired by biological neurons, they don't have much in common. </p>
+<p>Two common metrics for describing neural network architecture are the size (number of neurons) or the number of parameters. Modern Convolutional Networks contain hundreds of millions of parameters and are often ten to twenty layers deep. </p>
+<p>This allows for nicely organized architectures, where each layer's weights and biases can be stored in matrixes, and the activations of all neurons in a particular layer can be calculated by using the dot product. A full forward pass of a three layer network is three matrix multiplications, with an activation function being used. All three weight matrices and all three bias matrices are then learnable parameters of the network. Entire batches of training data can be evaluated in
+parallel then as well, by expanding the the dot product to use multiple input column vectors. The forward pass of a fully-connected layer uses one matrix multiplication followed with a bias offset and activation function. </p>
+<p>It can be mathematically shown that any continuous function can be modeled in this way with a neural network of at least one hidden layer. Neural networks work well because they can describe complicated functions in a compact and efficient manner, through the use of linear algebra, optimization through gradient descent, and hyperparameter tuning.</p>
+<p>Despite the fact that adding more layers allows for approximating higher dimension functions more accurately, it also leads to a greater chance of overfitting and lower generalization accuracy. Overall, the regularization strength parameter is the preferred way to control this overfitting. </p>
+<h3>Summary</h3>
+<ul>
+<li>Different activation functions were described, with ReLU being the most common choice</li>
+<li>Neural Networks with fully connected layers were described, with outputs from one layer mapping to the next layer</li>
+<li>This architecture enables efficient evaluation of neural networks through matrix multiplicaiton, stochastic gradient descent, and using an activation function.</li>
+<li>Neural networks are universal function approximaters, though can be prone to overfitting if proper precautions (some form of regularization) are not considered</li>
+</ul>
+<p>Until next time,</p>
+<h4>Clayton Blythe | <em>Deep Python</em></h4>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

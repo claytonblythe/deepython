@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>CS231n Lecture 4 Notes</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/deep-learning.html">Deep Learning</a></li>
+                    <li><a href="/category/docker.html">Docker</a></li>
+                    <li><a href="/category/misc.html">Misc</a></li>
+                    <li><a href="/category/other.html">Other</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/cs231n-lecture-4-notes.html" rel="bookmark"
+           title="Permalink to CS231n Lecture 4 Notes">CS231n Lecture 4 Notes</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-09-03T13:10:00+00:00">
+                Published: Sun 03 September 2017
+        </abbr>
+
+<p>In <a href="/category/deep-learning.html">Deep Learning</a>.</p>
+<p>tags: <a href="/tag/cs231n.html">cs231n</a> <a href="/tag/python.html">python</a> <a href="/tag/notes.html">notes</a> <a href="/tag/neural-networks.html">neural networks</a> </p>
+</footer><!-- /.post-info -->      <p>The purpose of this lecture was to introduce the imporatance and basic functioning of an fundamental concept in neural networks, backprogation. In short, backpropagation is a method for computing the gradient of a loss function with respect to the weights and biases of a neural network. This is done through recursive application of the chain rule, that you might be familiar with from multivariable calculus. </p>
+<p>Most of this section can be understood by reviewing the concept of how local derivatives can be calculated through the chain rule by using the output at that point and nearby gradients. The name "backpropagation" refers to how the chain rule is applied recursively backwards (i.e. backpropagating) through the circuit and can be thought of as gates communicating to each other, telling each other whether they want their outputs to increase or decrease in the aim of making the final output value higher. </p>
+<p>So to reiterate, the <em>forward pass</em> computes values from input to output, and the <em>backward pass</em> starts at the end and recursively applies the chain rule to sequentially compute the gradients. As a result, the gradients can be thought of as flowing backwards through the circuit. </p>
+<p>The interesting behavior is that to understand and calculate backpropagation, you only need local characteristics of the circuit such as output value of the gate and the local gradient of the inputs of a node with respect to the output value of that node. </p>
+<p>The lecture then uses an example with the <a href="https://en.wikipedia.org/wiki/Activation_function">sigmoid activation function</a></p>
+<p>Patterns in backward flow:
+1. Add
+2. Multiply
+3. Maximum</p>
+<p>The <em>add gate</em> always takes the gradient on its output and distributes it equally to all of its inputs, regardless of what the values were during the forward pass. </p>
+<p>The <em>multiply gate</em> has local gradients as input values, and this is multiplied on its output during the chain rule.</p>
+<p>The <em>max gate</em> routes the gradient, distributing the gradient to exactly one of its inputs. </p>
+<p>Summary: This section provided intuition for what role gradients play in neural networks and how they relate to backpropagation. The section also how these gradients flow backwards through the "circuit", determining which parts components (weights and biases) should increase or decrease to force the final output higher. It also discussed the idea of <em>staged computation</em> for implementing backpropagation in an iterative fashion. The idea is to break up your function into modules to derive local gradients and then chain them. The key is to decompose expressions into stages such that you can
+differentiate each stage independently, working through the circuit one step at a time. </p>
+<p>The next section will start discussion neural networks and how backpropagation allows for efficiently computing the gradients of the connections with respect to a loss function. </p>
+<p>Until next time,</p>
+<h4>Clayton Blythe | <em>Deep Python</em></h4>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

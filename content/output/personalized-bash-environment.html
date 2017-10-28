@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Personalized Bash Environment</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/deep-learning.html">Deep Learning</a></li>
+                    <li><a href="/category/docker.html">Docker</a></li>
+                    <li><a href="/category/misc.html">Misc</a></li>
+                    <li class="active"><a href="/category/other.html">Other</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/personalized-bash-environment.html" rel="bookmark"
+           title="Permalink to Personalized Bash Environment">Personalized Bash Environment</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-08-18T22:34:00+00:00">
+                Published: Fri 18 August 2017
+        </abbr>
+
+<p>In <a href="/category/other.html">Other</a>.</p>
+<p>tags: <a href="/tag/bash.html">bash</a> <a href="/tag/version-control.html">version control</a> </p>
+</footer><!-- /.post-info -->      <h2>Understanding Bash Startup Files</h2>
+<p>In order to do efficient work in a unix/linux environment, it is important to get a personalized environment setup to use various aliases, navigate to default directories, and to get your proper path environment setup. This article is meant to summarize the difference between .bashrc, .bash_profile, and .profile files and what I think the best setup is regarding these files. It is standard for these files to be stored in the home directory '~', which is the  <a href="https://www.gnu.org/software/bash/manual/bashref.html#Tilde-Expansion">Tilde Expansion</a>. </p>
+<p>It's helpful to think about how Bash chronologically behaves when it is invoked as a interactive login session. When Bash is invoked as interactive, it first reads from the file /etc/profile if that file exists. After reading that file, it will look for a file at ~/.bash_profile, ~/.bash_login, and ~/.profile in that order. It will execute commands from the first one that is available if it exists, and it will not proceed unless explicitly told so. </p>
+<p>If Bash is invoked as an interactive non-login session, then Bash reads and executes commands from ~/.bashrc if that file exists. Therefore, it is common to include the following commands in ~/.bash_profile, as it is often desired to ensure that ~/.bashrc is executed regardless of whether Bash is executed in a login or non-login session.  </p>
+<p>if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi</p>
+<p>So here in ~/.bashrc you can put all various starting configurations like your environment's PATH, and you can source a file containing aliases, like mine is at ~/.aliases. So every time you have a terminal session, whether it is a login session or simply another window, you can have your personalized environment ready for you. </p>
+<p>Just to specify, for remote shell logins, like a ssh login, Bash will read /etc/profile and then one of ~/.bash_profile or ~/.profile. </p>
+<p>For more reading, you can visit the bash manual and user guide <a href="https://www.gnu.org/software/bash/manual/bashref.html#Introduction">here</a>, or you can see another helpful guide <a href="https://mywiki.wooledge.org/DotFiles">here</a></p>
+<p>I think my setup will most likely include a sourcing of aliases from ~/.aliases within my ~/.bashrc file, which is sourced for every terminal session, either login or non-login sessions. This seems to be a good setup for keeping things tidy and organized. I am open to suggestions and advice if anyone reads this post!</p>
+<p>Until next time,</p>
+<h4>Clayton Blythe | <em>Deep Python</em></h4>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

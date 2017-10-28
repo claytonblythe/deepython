@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>A Pelican Blog - raspberry pi</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/deep-learning.html">Deep Learning</a></li>
+                    <li><a href="/category/docker.html">Docker</a></li>
+                    <li><a href="/category/misc.html">Misc</a></li>
+                    <li><a href="/category/other.html">Other</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/manchester-united-game-reminders-with-python-and-raspberry-pi.html">Manchester United Game Reminders with Python and Raspberry Pi</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-09-09T13:10:00+00:00">
+                Published: Sat 09 September 2017
+        </abbr>
+
+<p>In <a href="/category/other.html">Other</a>.</p>
+<p>tags: <a href="/tag/raspberry-pi.html">raspberry pi</a> <a href="/tag/python.html">python</a> <a href="/tag/web-scraping.html">web scraping</a> <a href="/tag/soccer.html">soccer</a> </p>
+</footer><!-- /.post-info --><p>Suprisingly, I have found that I have a lot more free time now in the real world working than I did during undergraduate study, but that might be because I was doing things like research programs and internships on top of taking seventeen credits a semester. However, now that I have this all this free time, I have started to follow sports more, specifically the English Premier League and NCAA Football. </p>
+<p>My favorite team in the English Premier League is Manchester United, however I couldn't be bothered to periodically check online, find their schedule, and determine when they play next. Additionally, I thought this would be a good opportunity for me to learn more about web scraping and python. So I built a simple web
+scraping script to periodically parse Manchester United's upcoming schedule and text it to my iphone every couple of days. </p>
+<p>I have a python script called redDevilNotify.py running every two days on my Raspberry Pi which uses a Raspian Linux Distribution as the operating system. The Raspberry Pi is running 24/7 in my apartment, but it is very efficient and doesn't use much energy. 
+The script uses the beautifulsoup python library to scrape the html of Manchester United's website for upcoming games, parses the html, converts the UTC dates to EST, and then it uses the Twilio API to text a reminder SMS to my iphone. </p>
+<p>The following crontab scheduling command is used to run the script, and you can edit this with the bash command bash:::crontab -e</p>
+<p>0 9 */2 * * /usr/bin/python3 /path/to/redDevilNotify.py </p>
+<p>This means that the script will run on the zeroth minute of the ninth hour every two days for every week and month of the year. </p>
+<p><a href="https://github.com/claytonblythe/RedDevilNotify">Github Repo</a></p>
+<p>Until next time,</p>
+<h4>Clayton Blythe | <em>Deep Python</em></h4>                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

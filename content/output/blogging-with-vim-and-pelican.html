@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Blogging with Vim and Pelican</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/deep-learning.html">Deep Learning</a></li>
+                    <li><a href="/category/docker.html">Docker</a></li>
+                    <li><a href="/category/misc.html">Misc</a></li>
+                    <li class="active"><a href="/category/other.html">Other</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/blogging-with-vim-and-pelican.html" rel="bookmark"
+           title="Permalink to Blogging with Vim and Pelican">Blogging with Vim and Pelican</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-09-09T13:10:00+00:00">
+                Published: Sat 09 September 2017
+        </abbr>
+
+<p>In <a href="/category/other.html">Other</a>.</p>
+<p>tags: <a href="/tag/vim.html">vim</a> </p>
+</footer><!-- /.post-info -->      <p>I have started to learn vim, and it has been a little painful to be honest. However, I have found it to be pretty liberating in that I barely need to use a mouse to do work on my laptop, especially for things like manipulating files, writing code, and even editing/building my blog. </p>
+<p>I am slowly learning the tricks to quickly and efficiently navigate file structures, make changes to files, and even run normal bash commands as well. It was quit intimidating at first, but I am already finding it rewarding. Now, I have even written some custom commands and scripts to integrate my blog editing and deployment process that uses Pelican, a python utility for building sites and converting markdown text files to HTML. </p>
+<p>I think that it is important to be able to work as quickly and efficiently as possible, and not be hampered by menial things like taking time to open files, make changes, save them, and then see how the changes impact what you are trying to build or accomplish. The goal here is to make sure that my fingers and ability to navigate file structures aren't the limiting factors for my productivity, but rather the speed at which I can think and come up with solutions or content. </p>
+<p>For my blog, my workflow is as follows: I type "serve" in the command line which is a bash alias for changing to the directory of my blog, running a python/pelican development server which serves a local host replica of my blog. The blog is automatically opened in google chrome at http://localhost.com:8000 for me to browse and critique, as this 8000 port is the default for pelican. In an iterm2 terminal, I launch vim with the command "v", hit the leader key "," and shortly after "f" to open a small file browser plugin, which shows at the bottom most recently used files. There I can quickly move to different posts I had been working
+on and use standard vim commands. In normal mode I type the leader key ',' and then shortly after I type 'z'. This allows me to perform edits in "focus mode", a minimalistic mode for the vim text editor that I find quite useful and aesthetically pleasing. This focus mode functionality comes from a vim plugin that comes with a vimrc repository that I will link at the bottom.</p>
+<p>One important customization I added to vim was to make the Caps Lock serve as an escape key, so I can easily revert back to normal mode without having to reach for the escape key, which can take a lot of time if you make hundreds of small edits.</p>
+<p>So I begin making changes, and then I write the buffer of the file onto disk with the ":w" vim command, which is connected to an autocmd hook in vim within ~/vim_runtime/my_configs.vim. This configuration calls the google chrome command line utility chrome-cli. Chrome-cli waits a little under a second for Pelican to build the static html pages, and then refreshes any tabs I have open that contain the title
+of my blog,"deepython.com", in the description of the tab. </p>
+<p>Here is the specific autocmd added to ~/.vim_runtime/my_configs.vim file: </p>
+<p>autocmd BufWritePost *.md :!sleep .69 &amp;&amp; /Users/claytonblythe/github/version_control/scripts/reloadDeepython.sh</p>
+<p>The script reloadDeepython.sh contains the following: </p>
+<p>chrome-cli list tabs | grep deepython.com | cut -c 2-4 | while read -r line; do chrome-cli reload -t "$line"; done</p>
+<p>This assumes you have chrome-cli installed, which can be installed with "pip install chrome-cli"</p>
+<p>Using this configuration, I can get almost instant feed back about the aesthetics and content of my posts without even having to exit vim! </p>
+<p>It has been a pretty valuable way for me to learn about vim, python, and bash scripting, not to mention it is saving me a lot of time as well. </p>
+<p>Here is a photo of what my development environment looks like. Pretty slick huh? </p>
+<p><img alt="Alt Test" src="https://deepython.com/images/blogSetup.png"> </p>
+<p>Here are some other links used in this post: </p>
+<ul>
+<li><a href="https://github.com/amix/vimrc">vimrc</a> github repo</li>
+<li><a href="https://github.com/claytonblythe/version_control/blob/master/scripts/reloadDeepython.sh">chrome-cli</a> script</li>
+<li><a href="https://github.com/prasmussen/chrome-cli">chrome-cli</a> github repo</li>
+</ul>
+<p>I hope that you find this useful. </p>
+<p>Until next time,</p>
+<h4>Clayton Blythe | <em>Deep Python</em></h4>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
