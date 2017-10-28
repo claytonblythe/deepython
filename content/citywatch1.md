@@ -1,5 +1,5 @@
 Title: Single-Shot Detector Prototype
-Date: 2017-8-29 13:10
+Date: 2017-10-29 13:10
 Category: Deep Learning 
 
 I have wanted to experiment with multibox object detection and semantic segmentation in urban environments, so I started this very rough prototyping project for implementing SSD (Single-Shot Detector) in an urban environment, to detect things like pedestrians, bikes, cars, and buses. The SSD model is known for being fast at inference time and it performs object localization and classification in one pass. Also, I could readily find examples written in PyTorch on github [here](https://github.com/amdegroot/ssd.pytorch). I used this repository heavily, and
