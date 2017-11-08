@@ -94,20 +94,24 @@ PROJECTS = [
             'https://github.com/claytonblythe/neuralMusic',
             'description': 'An attempt at six-second music genre classification with Neural Networks '},
         {
-            'name': 'Movie Colorify',
-            'url':
-            'https://github.com/claytonblythe/movie_colorify',
-            'description': 'A visual color palatte representation of any movie, written in Python'},
-        {
             'name': 'Computational Nanoscience',
             'url':
             'https://github.com/claytonblythe/spectral_analysis',
             'description': 'Analyzing circularly polarized high harmonic generation in helium'},
+        {   'name': 'redditstream-cli',
+            'url':
+            'https://github.com/claytonblythe/redditstream-cli',
+            'description': 'A terminal client for live-streaming new reddit comments'},
         {
             'name': 'Neural Selfie',
             'url':
             'https://github.com/claytonblythe/neuralSelfie',
             'description': 'An attempt at artistic style transfer on a selfie with neural networks'},
+        {
+            'name': 'Movie Colorify',
+            'url':
+            'https://github.com/claytonblythe/movie_colorify',
+            'description': 'A visual color palatte representation of any movie, written in Python'},
         {
             'name': 'Wifi Speed Tracking',
             'url':
