@@ -67,7 +67,7 @@ LANDING_PAGE_ABOUT = {'title': 'Python and Deep Learning',
         is <span itemprop="name">Clayton Blythe</span>.<p>I am a 22 year old guy working for <a href="https://ford.com/"
         title="Ford Motor Company" itemprop="affiliation">Ford Motor Company</a> as a Machine Learning / Artificial Intelligence Scientist. I play a broad role there, which
         includes research, product development, engineering and deployment for a variety of data intensive projects such as cybersecurity, customer interaction,
-        and autonomous vehicle itiatives.
+        and autonomous vehicle initiatives.
         </p>You can take a look at my <a href="https://github.com/claytonblythe/" title="Github
        profile" itemprop="url"><span itemprop="nickname">Github profile</span></a>, reach out to me
        at my personal email <a
