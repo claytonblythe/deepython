@@ -42,7 +42,13 @@ I recommend a Samsung Internal SSD.
 
 [Here is a 2TB version](https://www.amazon.com/gp/product/B010QD6RX4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B010QD6RX4&linkCode=as2&tag=deepython-20&linkId=f5ad8802faaaa465193e30fd37c448a7)
 
-I will be updating this more yet, but the GPU, CPU, and SSD are core parts of the build you want.
+---
+## General Programming
+
+I do a lot of programming and video editing in my free time. I prefer an operating system that has a linux/unix style command line interface, with high performance while looking good. The [Dell XPS 13 8th Gen](https://www.amazon.com/gp/product/B0762JB7M8/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0762JB7M8&linkCode=as2&tag=deepython-20&linkId=57f22d708469a70964294aeae190da56) fulfills all these needs. It has an infinity edge display with almost no bezels, a solid state hard
+drive, 8GB or 16GB of RAM, and the new 8th generation intel CPU. I plan on installing Ubuntu or Debian on the laptop, as it comes with Windows 10 installed. I may have to pounce on this laptop during the holiday season. 
+
+I will be continually adding things here as time goes on and I discover new parts. 
 
 Until next time,
 #### Clayton Blythe | *Deep Python*
