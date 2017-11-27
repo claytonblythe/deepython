@@ -10,7 +10,7 @@ The TITAN GeForce is near top of the line for deep learning applications and res
 
 [2 x NVIDIA GeForce TITAN X](https://www.amazon.com/gp/product/B00UXTN5P0?ie=UTF8&tag=deepython-20&camp=1789&linkCode=xm2&creativeASIN=B00UXTN5P0)
 
-On the slightly less expensive side, there is the GTX 1080. This is based on the new Pascal and has shown to have increased performance and benchmarks for deep learning experiments. However, the catch is that the 1080 only has 8GB of RAM compared to the TITAN X's 12GB per GPU.  
+On the slightly less expensive side, there is the GTX 1080. This is based on the new Pascal and has shown to have increased performance and benchmarks for deep learning experiments. However, the catch is that the 1080 only has 11GB of memory compared to the TITAN X's 12GB per GPU. However, I think this is the more cost effective option at the moment, expecially with cryptocurrencies driving up GPU prices.   
 
 [2 x NVIDIA GeForce GTX 1080 Ti](https://www.amazon.com/gp/product/B06Y11DFZ3/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B06Y11DFZ3&linkCode=as2&tag=deepython-20&linkId=26f6f380c0bb7f0e38b68f474080684d)
 
@@ -31,6 +31,8 @@ Another good option is the slightly slower [Intel i5 3.50 GHz Skylake](https://w
 Here you want sufficient space to keep your small/medium sized datasets in memory, which can help speed things up quite a bit. I've heard good things about this 32GB kit from Ballistix. 
 
 [Ballistics Elite 32Gb DDR4 Kit](https://www.amazon.com/gp/product/B00RCGJPUQ?ie=UTF8&tag=deepython-20&camp=1789&linkCode=xm2&creativeASIN=B00RCGJPUQ)
+
+Here you might even want to opt for two of these, especially if you are doing computer vision related tasks. You can improve training and inference speed by increasing your batch size. To do so takes more RAM typically. 
 
 ---
 ## Storage
