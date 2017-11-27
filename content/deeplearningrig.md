@@ -25,8 +25,7 @@ One important thing to remember here is that you want to ensure that you have en
 
 Another good option is the slightly slower [Intel i5 3.50 GHz Skylake](https://www.amazon.com/gp/product/B012M8M7TY/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B012M8M7TY&linkCode=as2&tag=deepython-20&linkId=247dc2b25f648234cd9d2e713560e262)
 
-If you really want to go all out, the [AMD Ryzen Threadripper 1950X](https://www.amazon.com/gp/product/B074CBH3R4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B074CBH3R4&linkCode=as2&tag=deepython-20&linkId=cbedf7505aa01973de832e8dd214f275) is about the best that money can buy currently.
-
+If you really want to go all out, the [AMD Ryzen Threadripper 1950X](https://www.amazon.com/gp/product/B074CBH3R4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B074CBH3R4&linkCode=as2&tag=deepython-20&linkId=cbedf7505aa01973de832e8dd214f275) is about the best that money can buy currently. It is great value for 16 cores and 32 threads of processing power at 4.0 GHz, all while boasting 64 PCIe Gen3 Lanes. 
 
 ---
 ## Memory
