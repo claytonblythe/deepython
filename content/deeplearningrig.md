@@ -10,7 +10,7 @@ The TITAN GeForce is near top of the line for deep learning applications and res
 
 [2 x NVIDIA GeForce TITAN X](https://www.amazon.com/gp/product/B00UXTN5P0?ie=UTF8&tag=deepython-20&camp=1789&linkCode=xm2&creativeASIN=B00UXTN5P0)
 
-On the slightly less expensive side, there is the GTX 1080. This is based on the new Pascal and has shown to have increased performance and benchmarks for deep learning experiments. However, the catch is that the 1080 only has 11GB of memory compared to the TITAN X's 12GB per GPU. However, I think this is the more cost effective option at the moment, expecially with cryptocurrencies driving up GPU prices.   
+On the slightly less expensive side, there is the GTX 1080 Ti. This is based on the new Pascal and has shown to have increased performance and benchmarks for deep learning experiments, often times matching or surpassing the Titan X. However, the catch is that the 1080 Ti only has 11GB of memory compared to the TITAN X's 12GB per GPU. However, I think this is the more cost effective option at the moment, expecially with cryptocurrencies driving up GPU prices.   
 
 [2 x NVIDIA GeForce GTX 1080 Ti](https://www.amazon.com/gp/product/B06Y11DFZ3/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B06Y11DFZ3&linkCode=as2&tag=deepython-20&linkId=26f6f380c0bb7f0e38b68f474080684d)
 
