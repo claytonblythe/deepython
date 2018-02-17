@@ -5,7 +5,7 @@ Category: Deep Learning
 A few months ago I worked on a project to apply convolutional neural networks and deep learning for the task of music genre classification. Similar to how Shazam can precisely determine genre class membership of songs from [Free Music Archive](http://freemusicarchive.org/).  
 
 The dataset can be found [in this github repository](https://github.com/mdeff/fma) which provides 30 second samples of thousands of tracks. With my initial experimentation with 8,000 tracks of 8 different genres, I was able to classify songs correctly with ~50% accuracy using a very simple convolutional neural network based off the VGG network, a series of 3x3 convolutions with stride of 1, padding of 1, batch normalization, ReLU, and 2x2 max pooling, taking an image from 512x512 to a
-softmax prediction of eight genres. Preprocessing of the 8,000 tracks was done to convert audio into melspectrograms using the librosa package in python. 
+softmax prediction of eight genres. Preprocessing of the 8,000 tracks was done to convert audio into melspectrograms using the librosa package in python. For the convolutional neural network, I used PyTorch as I think the syntax is very pythonic, and it is really easy to quick throw things together and write custom data loaders. 
 
 For example, this is the spectrogram for "Lose Yourself To Dance" by Daft Punk. 
 
