@@ -10,18 +10,18 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="git, version control, bash, Other, " />
+<meta name="keywords" content="python, machine learning, Misc, " />
 
-<meta property="og:title" content="My Git Workflow "/>
-<meta property="og:url" content="https://deepython.com.s3-website.us-east-1.amazonaws.com/my-git-workflow.html" />
-<meta property="og:description" content="Working Efficiently (a.k.a. Lazily) I think it is very important to reduce the amount of typing that one has to do to keep track of projects, experiments, and working with version control, especially across multiple devices. As such, I have developed a sytem that I think works pretty …" />
+<meta property="og:title" content="Thoughts on H2O (The Machine Learning Platform) "/>
+<meta property="og:url" content="https://deepython.com.s3-website.us-east-1.amazonaws.com/thoughts-on-h2o-the-machine-learning-platform.html" />
+<meta property="og:description" content="Thoughts on H2O Machine Learning Platform This is a short write-up of my experiences and thoughts using the H2O machine learning platform, made by H2O.ai. H2O is an in-memory platform for distributed, scalable machine learning. H2O uses familiar interfaces like R, Python, Scala, Java, JSON and the Flow notebook …" />
 <meta property="og:site_name" content="deepython.com" />
 <meta property="og:article:author" content="Clayton Blythe" />
-<meta property="og:article:published_time" content="2017-09-02T13:10:00-05:00" />
-<meta name="twitter:title" content="My Git Workflow ">
-<meta name="twitter:description" content="Working Efficiently (a.k.a. Lazily) I think it is very important to reduce the amount of typing that one has to do to keep track of projects, experiments, and working with version control, especially across multiple devices. As such, I have developed a sytem that I think works pretty …">
+<meta property="og:article:published_time" content="2017-08-17T19:56:00-05:00" />
+<meta name="twitter:title" content="Thoughts on H2O (The Machine Learning Platform) ">
+<meta name="twitter:description" content="Thoughts on H2O Machine Learning Platform This is a short write-up of my experiences and thoughts using the H2O machine learning platform, made by H2O.ai. H2O is an in-memory platform for distributed, scalable machine learning. H2O uses familiar interfaces like R, Python, Scala, Java, JSON and the Flow notebook …">
 
-        <title>My Git Workflow  · deepython.com
+        <title>Thoughts on H2O (The Machine Learning Platform)  · deepython.com
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -70,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="https://deepython.com.s3-website.us-east-1.amazonaws.com/my-git-workflow.html"> My Git Workflow  </a></h1>
+    <h1><a href="https://deepython.com.s3-website.us-east-1.amazonaws.com/thoughts-on-h2o-the-machine-learning-platform.html"> Thoughts on H2O (The Machine Learning Platform)  </a></h1>
     </header>
 </div>
 
@@ -78,16 +78,38 @@
         <div class="span8 offset2 article-content">
 
             
-            <h2>Working Efficiently (a.k.a. Lazily)</h2>
-<p>I think it is very important to reduce the amount of typing that one has to do to keep track of projects, experiments, and working with version control, especially across multiple devices. As such, I have developed a sytem that I think works pretty well, specifically for managing Github respositories and projects directly from the command line. Though it is heavily personalized to my own Github profile and there are other tools out there like Hub, I decided to build my own. </p>
-<p>First off, I made a bash script called newRepo.sh  which will create a new repository named after the first argument that I provide after the "newRepo" command. So if I type "newRepo pytorchTutorials", I will create a new github project called pytorchTutorials that resides in my Github repositories in the cloud. This allows me to quickly create new repos and projects from the command line without having to go to the Github website, create a repository, and then clone it through the command line. The newRepo script uses the Github API to create and
-clone that newly made repository as well as add a predefined project directory structure for data, notebooks, figures, and scripts. </p>
-<p>The script is still a work in progress, and I am looking to make other scripts/aliases that will allow for creating private repositories and deleting them as well. </p>
-<p>Other useful git tools that I have made are aliases for cloning, commiting, and pushing changes to the remote repository. I have 'git status' as gs, 'git add --all' as gaa, and gcp "message here" as an alias to commit all the added changes with a provided commit message, and then push the changes. </p>
-<p>This tends to speed up my workflow greatly, and I hope you can find them useful! </p>
-<p>Most of the aliases can be found in my <a href="https://github.com/claytonblythe/dotfiles">dotfiles repository</a> and the newRepo script can be found in my <a href="https://github.com/claytonblythe/version_control">version_control</a> repository.</p>
+            <h2>Thoughts on H2O Machine Learning Platform</h2>
+<p>This is a short write-up of my  experiences and thoughts using the H2O machine learning platform, 
+made by H2O.ai. </p>
+<p>H2O is an in-memory platform for distributed, scalable machine learning. H2O uses familiar interfaces like R, Python, Scala, Java, JSON and the Flow 
+notebook/web interface, and works seamlessly with big data technologies like Hadoop and Spark. H2O provides implementations of many popular algorithms such as GBM, Random Forest, 
+Deep Neural Networks, Word2Vec and Stacked Ensembles.  H2O is extensible so that developers can add data transformations and custom algorithms of their choice and access them through all of those clients.  </p>
+<p>Overall, I think that H2O is a great tool for quick prototyping and 
+experimentation with different datasets and model families, particularly for the task of binary classification on relational data. </p>
+<h3>Usability</h3>
+<p>In my experience, the ramp-up time, usability, and minimal boilerplate code needed to run
+machine learning experiments and test a variety of model types on varying relational datasets is where H2O's primary use lies. 
+With the H2O Flow interface, those without specific knowledge of machine learning 
+skills in Python, R, or SAS can easily ingest datasets from csv or parquet, and train from various model family types. </p>
+<h3>Cababilities</h3>
+<p>A dataset can easily be sampled, split, 
+or have k-fold cross validation performed, all the while providing in-depth performance statistics like AUROC, F1, and other standard measures at various 
+probability thresholds. </p>
+<p>Use of the distributed H2O machine learning capabilities can scale to large datasets with millions of rows, and can be used through API's for Python, R, and Scala. 
+Models can be exported as Plain Old Java Objects (POJO's) for use in production, though I haven't experimented with this. </p>
+<p>H20.ai is also a member of the <a href="http://gpuopenanalytics.com/#/">GPU Open Analytics Initiative</a>, with a growing community of members like 
+Apache Arrow, Anaconda, MapD, working to integrate all portions of the data science stack on GPU. 
+From my research, it appears that MapD, Nvidia, Anaconda, and H2O.ai are working on creating a standardized GPU Dataframe 
+as seen in <a href="https://github.com/gpuopenanalytics/pygdf">this PyGDF github repo.</a>
+This should alllow for faster training of machine learning models where possible, providing a NumPy-like Python API, all 
+while using familiar environment management like conda. </p>
+<h3>Final Thoughts</h3>
+<p>I think that overall the H2O machine learning platform and API especially is a very useful tool to quickly experiment 
+with different datasets and model families, particularly for the task of binary classification. I'm not convinced that it is mature yet for computer vision tasks like object detection or semantic segmentation. </p>
+<p>The primary use case would be quickly making a prototype gradient boosting or random forest model on large relational datasets that might not fit in memory. 
+If one needs to quickly iterate and learn about the information value of the data, or quickly produce a result for a presentation, H2O fits that niche nicely. </p>
+<p>In addition </p>
 <p>Until next time,</p>
-<h4>Clayton Blythe | <em>Deep Python</em></h4>
             
             
             <hr/>
@@ -95,19 +117,16 @@ clone that newly made repository as well as add a predefined project directory s
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2017-09-02T13:10:00-05:00">Sep 2, 2017</time>
+            <time pubdate="pubdate" datetime="2017-08-17T19:56:00-05:00">Aug 17, 2017</time>
             <h4>Category</h4>
-            <a class="category-link" href="https://deepython.com.s3-website.us-east-1.amazonaws.com/categories.html#other-ref">Other</a>
+            <a class="category-link" href="https://deepython.com.s3-website.us-east-1.amazonaws.com/categories.html#misc-ref">Misc</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://deepython.com.s3-website.us-east-1.amazonaws.com/tags.html#bash-ref">bash
-                    <span>2</span>
-</a></li>
-                <li><a href="https://deepython.com.s3-website.us-east-1.amazonaws.com/tags.html#git-ref">git
+                <li><a href="https://deepython.com.s3-website.us-east-1.amazonaws.com/tags.html#machine-learning-ref">machine learning
                     <span>1</span>
 </a></li>
-                <li><a href="https://deepython.com.s3-website.us-east-1.amazonaws.com/tags.html#version-control-ref">version control
-                    <span>3</span>
+                <li><a href="https://deepython.com.s3-website.us-east-1.amazonaws.com/tags.html#python-ref">python
+                    <span>8</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

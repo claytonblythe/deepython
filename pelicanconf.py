@@ -4,10 +4,10 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Clayton Blythe'
 SITENAME = u"""<img src="/theme/images/android-chrome-512x512.png" width="33" height="33">  <span style="color:#254601; font-size:17pt">  deepython.com </span> """
-#SITEURL='https://deepython.com.s3-website.us-east-2.amazonaws.com/'
+SITEURL='https://deepython.com.s3-website.us-east-1.amazonaws.com/'
 #SITEURL='http://localhost:8000'
 #SITEURL='https://68.40.128.255'
-SITEURL='http://deepython.com'
+#SITEURL='http://deepython.com'
 PATH = 'content'
 
 # Elegant theme
@@ -41,7 +41,7 @@ LINKS = (('Pelican', 'https://getpelican.com/'),
 SOCIAL = (('LinkedIn', 'https://linkedin.com/in/claytonblythe'),
           ('Github', 'https://github.com/claytonblythe'),)
 
-PLUGIN_PATHS=['/Users/claytonblythe/github/pelican-plugins']
+PLUGIN_PATHS=['/Users/clayton.blythe/github/pelican-plugins']
 PLGINS=['tipque_search', 'sitemap']
 
 SITEMAP = {
@@ -60,7 +60,7 @@ SITEMAP = {
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-THEME='/users/claytonblythe/github/elegantdp'
+THEME='/users/clayton.blythe/github/elegantdp'
 
 LANDING_PAGE_ABOUT = {'title': 'Python and Deep Learning',
         'details': """<div itemscope itemtype="https://schema.org/Person"><p>My name
