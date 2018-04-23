@@ -10,7 +10,7 @@ Instead, I developed a command line tool and interface for live streaming reddit
 
 Here are three separate sessions running in separate windows, streaming [r/politics](http://reddit.com/r/politics) [r/soccer](http://reddit.com/r/soccer) and [r/python](http://reddit.com/r/python) respectively. They will live load new comments to the subreddits as soon as they are posted. 
 
-![Alt Test](https://deepython.com/images/redditstream-cli-screenshot.png) 
+![Alt Test](http://deepython.com/images/redditstream-cli-screenshot.png) 
 
 Here is an extra demo of what it looks like in action! 
 

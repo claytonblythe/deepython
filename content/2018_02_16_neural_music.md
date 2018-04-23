@@ -9,7 +9,7 @@ softmax prediction of eight genres. Preprocessing of the 8,000 tracks was done t
 
 For example, this is the spectrogram for "Lose Yourself To Dance" by Daft Punk. 
 
-![Alt Test](https://deepython.com/images/lose_yourself_to_dance.png)
+![Alt Test](http://deepython.com/images/lose_yourself_to_dance.png)
 
 A spectrogram decomposes audio from the amplitude/time domain into the frequency domain, allowing for a pictoral and visual representation of a song! I extracted random samples of 5.94 seconds for each song, so it is a very short time to be able to determine music genre. Overall, I think that these are very promising results using such a simple architecture and training from scratch on a small portion of data.
 

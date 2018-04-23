@@ -4,7 +4,8 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Clayton Blythe'
 SITENAME = u"""<img src="/theme/images/android-chrome-512x512.png" width="33" height="33">  <span style="color:#254601; font-size:17pt">  deepython.com </span> """
-SITEURL='https://deepython.com.s3-website.us-east-1.amazonaws.com/'
+#SITEURL='https://deepython.com.s3-website.us-east-1.amazonaws.com/'
+SITE_URL='http://deepython.com'
 #SITEURL='http://localhost:8000'
 #SITEURL='https://68.40.128.255'
 #SITEURL='http://deepython.com'
@@ -64,10 +65,9 @@ THEME='/users/clayton.blythe/github/elegantdp'
 
 LANDING_PAGE_ABOUT = {'title': 'Python and Deep Learning',
         'details': """<div itemscope itemtype="https://schema.org/Person"><p>My name
-        is <span itemprop="name">Clayton Blythe</span>.<p>I am currently working for <a href="https://ford.com/"
-        title="Ford Motor Company" itemprop="affiliation">Ford Motor Company</a> as a Machine Learning / Artificial Intelligence Scientist. I play a broad role there, which
-        includes research, product development, engineering and deployment for a variety of data intensive projects such as cybersecurity, customer interaction,
-        and autonomous vehicle initiatives.
+        is <span itemprop="name">Clayton Blythe</span>.<p>I am currently working for <a href="https://asurion.com/"
+        title="Asurion" itemprop="affiliation">Asurion</a> as a Machine Learning Engineer. I play a broad role there, which
+        includes research, product development, engineering and deployment for a variety of data intensive projects such as computer vision, application development, and customer interaction.
         </p>You can take a look at my <a href="https://github.com/claytonblythe/" title="Github
        profile" itemprop="url"><span itemprop="nickname">Github profile</span></a>, reach out to me
        at my personal email <a
